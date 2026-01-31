@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docker:build": "docker build -t unisex_saloon .",
+    "docker:up": "docker compose up --build --detach",
+    "docker:down": "docker compose down"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

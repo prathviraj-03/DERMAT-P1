@@ -1,0 +1,14 @@
+# Ignore node modules and build artifacts
+node_modules
+.next
+.vscode
+.env
+.env.local
+.env.*.local
+Dockerfile
+docker-compose*.yml
+README.md
+.git
+.gitignore
+*.log
+.DS_Store
