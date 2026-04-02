@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { services, blogPosts } from '@/lib/data';
 
+export const dynamic = 'force-static';
+export const revalidate = 0;
+
 const baseUrl = 'https://unisexsalon.com'; // Replace with actual domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
