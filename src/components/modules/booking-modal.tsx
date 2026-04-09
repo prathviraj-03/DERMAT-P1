@@ -229,7 +229,7 @@ export function BookingModal() {
                   >
                     <option value="">Select Doctor</option>
                     {teamMembers.map((doc) => (
-                      <option key={doc.id} value={doc.slug}>
+                      <option key={doc.id} value={doc.id.toString()}>
                         {doc.name}
                       </option>
                     ))}

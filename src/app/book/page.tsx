@@ -23,7 +23,7 @@ const bookingSchema = z.object({
 
 type BookingFormValues = z.infer<typeof bookingSchema>;
 
-export default function BookPage() {
+function BookForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const defaultService = searchParams.get('service');
@@ -228,5 +228,13 @@ export default function BookPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function BookPage() {
+  return (
+    <React.Suspense fallback={<div className="flex h-screen items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-[#c5a47e]" /></div>}>
+      <BookForm />
+    </React.Suspense>
   );
 }

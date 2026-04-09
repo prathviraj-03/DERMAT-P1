@@ -4,9 +4,9 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { CheckCircle, CreditCard, ShieldCheck, User, Calendar, Clock, Stethoscope } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -197,5 +197,13 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<div className="flex h-screen items-center justify-center p-4 text-[#c5a47e]">Loading checkout...</div>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
