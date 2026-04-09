@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { services } from '@/lib/data';
+import { services } from '@/content';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Clock, ArrowRight } from 'lucide-react';
@@ -66,16 +66,9 @@ export function FeaturedServices() {
                       {service.category}
                     </span>
                   </div>
-
-                  {/* Price Badge */}
-                  <div className="absolute right-4 bottom-4">
-                    <span className="rounded-lg bg-[#c5a47e] px-4 py-2 text-lg font-bold text-white">
-                      ₹{service.price}
-                    </span>
                   </div>
-                </div>
 
-                {/* Content */}
+                  {/* Content area */}
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold text-[#1a1a1a] transition-colors group-hover:text-[#0a0a0a]">
                     {service.name}

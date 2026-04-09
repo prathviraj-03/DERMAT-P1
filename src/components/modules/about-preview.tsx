@@ -4,30 +4,17 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Shield, Award, Users, Star } from 'lucide-react';
+import { homeContent } from '@/content';
+
+const iconMap: Record<string, any> = {
+  Shield,
+  Award,
+  Users,
+  Star
+};
 
 export function AboutPreview() {
-  const features = [
-    {
-      icon: Award,
-      title: '10+ Years Experience',
-      description: 'Decade of excellence in beauty & grooming',
-    },
-    {
-      icon: Shield,
-      title: 'Hygiene First',
-      description: 'Hospital-grade sterilization protocols',
-    },
-    {
-      icon: Users,
-      title: 'Expert Professionals',
-      description: 'Trained & certified stylists',
-    },
-    {
-      icon: Star,
-      title: 'Premium Products',
-      description: 'Only the best brands used',
-    },
-  ];
+  const { heading, body, features, ctaLabel } = homeContent.aboutPreview;
 
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a] py-24 text-white md:py-32">
@@ -59,7 +46,7 @@ export function AboutPreview() {
               viewport={{ once: true }}
               className="text-sm font-medium tracking-[0.2em] text-[#c5a47e] uppercase"
             >
-              Welcome to Oceanic Salon
+              Welcome to DermaCare Clinic
             </motion.span>
 
             <motion.h2
@@ -69,35 +56,21 @@ export function AboutPreview() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-serif text-4xl font-bold text-white md:text-5xl"
             >
-              About Us
+              {heading}
             </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg leading-relaxed text-white/80"
-            >
-              At Oceanic Salon, we combine artistry with expertise to deliver
-              exceptional beauty experiences. Our team of skilled professionals
-              is dedicated to helping you look and feel your absolute best,
-              using only premium products and the latest techniques in hair,
-              skin, and grooming services.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg leading-relaxed text-white/80"
-            >
-              We believe that everyone deserves to experience luxury and care.
-              That&apos;s why we&apos;ve created a welcoming, inclusive space
-              where you can relax, rejuvenate, and emerge feeling confident and
-              beautiful.
-            </motion.p>
+            {body.map((para, idx) => (
+              <motion.p
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 + idx * 0.1 }}
+                className="text-lg leading-relaxed text-white/80"
+              >
+                {para}
+              </motion.p>
+            ))}
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -111,7 +84,7 @@ export function AboutPreview() {
                   size="lg"
                   className="bg-[#c5a47e] px-8 font-semibold text-[#1a1a1a] hover:bg-[#d4b896]"
                 >
-                  Read More About Us
+                  {ctaLabel}
                 </Button>
               </Link>
             </motion.div>
@@ -125,7 +98,9 @@ export function AboutPreview() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="grid grid-cols-2 gap-6"
           >
-            {features.map((feature, index) => (
+            {features.map((feature, index) => {
+              const Icon = iconMap[feature.icon];
+              return (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -135,13 +110,13 @@ export function AboutPreview() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="rounded-xl border border-white/10 bg-white/10 p-6 backdrop-blur-sm transition-all hover:bg-white/15"
               >
-                <feature.icon className="mb-4 h-10 w-10 text-[#c5a47e]" />
+                {Icon && <Icon className="mb-4 h-10 w-10 text-[#c5a47e]" />}
                 <h3 className="mb-2 text-lg font-semibold text-white">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-white/70">{feature.description}</p>
               </motion.div>
-            ))}
+            )})}
           </motion.div>
         </div>
       </div>

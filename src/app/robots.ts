@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://unisexsalon.com/sitemap.xml',
+    sitemap: 'https://dermacareclinic.com/sitemap.xml',
   };
 }

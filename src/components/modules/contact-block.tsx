@@ -4,30 +4,14 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, Navigation } from 'lucide-react';
+import { contactInfoItems } from '@/content';
+
+const iconMap: Record<string, any> = {
+  MapPin, Phone, Mail, Clock, Navigation
+};
 
 export function ContactBlock() {
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: ['123 Salon Street, Suite 100', 'City, State 12345'],
-    },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: ['+91 86559 25011', '+91 98765 43210'],
-    },
-    {
-      icon: Mail,
-      title: 'Email Us',
-      details: ['hello@tribesalon.com', 'bookings@tribesalon.com'],
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Mon - Sat: 9:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 6:00 PM'],
-    },
-  ];
+  const contactInfo = contactInfoItems;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#f5f5f5] to-white py-24 md:py-32">
@@ -66,7 +50,9 @@ export function ContactBlock() {
 
         {/* Contact Cards */}
         <div className="mb-12 grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
-          {contactInfo.map((item, index) => (
+          {contactInfo.map((item, index) => {
+            const Icon = iconMap[item.icon as string];
+            return (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
@@ -80,18 +66,15 @@ export function ContactBlock() {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] md:mb-4 md:h-14 md:w-14"
               >
-                <item.icon className="h-5 w-5 text-white md:h-6 md:w-6" />
+                {Icon && <Icon className="h-5 w-5 text-white md:h-6 md:w-6" />}
               </motion.div>
               <h3 className="mb-1 text-base font-semibold text-[#1a1a1a] transition-colors group-hover:text-[#0a0a0a] md:mb-2 md:text-lg">
                 {item.title}
               </h3>
-              {item.details.map((detail, i) => (
-                <p key={i} className="text-xs text-[#666666] md:text-sm">
-                  {detail}
-                </p>
-              ))}
+              <p className="text-xs text-[#666666] md:text-sm">{item.content}</p>
+              {item.subContent && <p className="text-xs text-[#666666] md:text-sm">{item.subContent}</p>}
             </motion.div>
-          ))}
+          )})}
         </div>
 
         {/* CTA Buttons */}

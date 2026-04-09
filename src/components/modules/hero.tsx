@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Calendar, ChevronDown } from 'lucide-react';
 import { useRef } from 'react';
 import { BookButton } from '@/components/modules/book-button';
+import { homeContent } from '@/content';
 
 export function Hero() {
   const ref = useRef(null);
@@ -86,7 +87,7 @@ export function Hero() {
               }}
             >
               <h1 className="font-serif text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
-                {['Oceanic'].map((word, i) => (
+                {[homeContent.hero.headline].map((word, i) => (
                   <motion.span
                     key={i}
                     variants={{
@@ -135,8 +136,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
           >
-            Experience the art of transformation at Tribe Salon. Where luxury
-            meets expertise in hair, skin, and complete grooming services.
+            Experience the art of skin transformation at DermaCare Clinic. Where medical expertise
+            meets luxurious patient care in dermatology and wellness treatments.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 
 interface BookingContextType {
   isOpen: boolean;
@@ -14,14 +15,21 @@ const BookingContext = React.createContext<BookingContextType | undefined>(
 );
 
 export function BookingProvider({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+  
+  // Keep these states for legacy compatibility, 
+  // but we won't use them to render modals anymore.
   const [isOpen, setIsOpen] = React.useState(false);
   const [preselectedService, setPreselectedService] = React.useState<
     string | undefined
   >(undefined);
 
   const openBooking = (serviceSlug?: string) => {
-    setPreselectedService(serviceSlug);
-    setIsOpen(true);
+    if (serviceSlug && typeof serviceSlug === 'string') {
+      router.push(`/book?service=${serviceSlug}`);
+    } else {
+      router.push('/book');
+    }
   };
 
   const closeBooking = () => {

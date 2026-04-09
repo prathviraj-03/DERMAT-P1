@@ -4,23 +4,12 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { navigationConfig, siteConfig } from '@/content';
 
 export function Footer() {
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Services', href: '/services' },
-    { name: 'Blog', href: '/blogs' },
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Book Appointment', href: '/contact' },
-  ];
+  const quickLinks = navigationConfig.quickLinks;
 
-  const services = [
-    { name: 'Haircut & Styling', href: '/services' },
-    { name: 'Hair Spa', href: '/services' },
-    { name: 'Facial & Skin Care', href: '/services' },
-    { name: 'Beard Grooming', href: '/services' },
-    { name: 'Bridal Makeup', href: '/services' },
-  ];
+  const services = navigationConfig.servicesConfig;
 
   return (
     <footer className="bg-[#1a1a1a] text-white">
@@ -33,7 +22,7 @@ export function Footer() {
                 Join Our Newsletter
               </h3>
               <p className="text-white/60">
-                Receive beauty tips, exclusive offers, and salon updates.
+                Receive beauty tips, exclusive offers, and clinic updates.
               </p>
             </div>
             <div className="flex w-full gap-2 md:w-auto">
@@ -57,13 +46,12 @@ export function Footer() {
           <div className="col-span-2 space-y-6 md:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
               <span className="font-serif text-3xl font-bold">
-                <span className="text-white">Oceanic</span>
-                <span className="text-[#c5a47e]"> Salon</span>
+                <span className="text-white">{siteConfig.name.split(' ')[0]}</span>
+                <span className="text-[#c5a47e]"> {siteConfig.name.split(' ').slice(1).join(' ')}</span>
               </span>
             </Link>
             <p className="leading-relaxed text-white/70">
-              Premium grooming and styling services for everyone. Experience the
-              best in hair, skin, and beauty care.
+              {siteConfig.description}
             </p>
           </div>
 
@@ -116,34 +104,35 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-[#c5a47e]" />
                 <span className="text-white/70">
-                  123 Salon Street, Suite 100
+                  {siteConfig.address.split(',')[0]}
                   <br />
-                  City, State 12345
+                  {siteConfig.cityState}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-[#c5a47e]" />
                 <a
-                  href="tel:+918655925011"
+                  href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
                   className="text-white/70 transition-colors hover:text-[#c5a47e]"
                 >
-                  +91 86559 25011
+                  {siteConfig.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0 text-[#c5a47e]" />
                 <a
-                  href="mailto:hello@tribesalon.com"
+                  href={`mailto:${siteConfig.email}`}
                   className="text-white/70 transition-colors hover:text-[#c5a47e]"
                 >
-                  hello@Oceanicsalon.com
+                  {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="mt-1 h-5 w-5 flex-shrink-0 text-[#c5a47e]" />
                 <div className="text-white/70">
-                  <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
-                  <p>Sunday: 10:00 AM - 6:00 PM</p>
+                  {siteConfig.businessHours.map((hour, idx) => (
+                    <p key={idx}>{hour}</p>
+                  ))}
                 </div>
               </li>
             </ul>
@@ -156,7 +145,7 @@ export function Footer() {
         <div className="container py-6">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-white/50">
-              © {new Date().getFullYear()} Oceanic Salon. All rights reserved.
+              © {new Date().getFullYear()} DermaCare Clinic. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-white/50">
               <Link

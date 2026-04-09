@@ -4,6 +4,8 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Providers } from '@/components/providers';
 import { FloatingBookButton } from '@/components/floating-book-button';
+import { ChatbotWidget } from '@/components/modules/chatbot-widget';
+import { siteConfig } from '@/content';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -19,23 +21,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Oceanic Salon | Premium Hair & Beauty Services',
-  description:
-    'Experience luxury grooming, hair styling, and skincare at Oceanic Salon. Where elegance meets expertise. Book your appointment today.',
-  keywords: [
-    'salon',
-    'hair salon',
-    'beauty salon',
-    'grooming',
-    'haircut',
-    'spa',
-    'skincare',
-    'unisex salon',
-  ],
+  title: siteConfig.seo.title,
+  description: siteConfig.seo.description,
+  keywords: siteConfig.seo.keywords,
   openGraph: {
-    title: 'Oceanic Salon | Premium Hair & Beauty Services',
-    description:
-      'Experience luxury grooming, hair styling, and skincare at Tribe Salon.',
+    title: siteConfig.seo.ogTitle,
+    description: siteConfig.seo.ogDescription,
     type: 'website',
   },
 };
@@ -55,6 +46,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <FloatingBookButton />
+          <ChatbotWidget />
         </Providers>
       </body>
     </html>

@@ -1,0 +1,360 @@
+{
+  "aboutContent": {
+    "heading": "Our Story",
+    "subheading": "Learn more about DermaCare Clinic",
+    "body": [
+      "We founded DermaCare Clinic with a clear mission: to provide world-class dermatological care and skin health solutions to our community, combining cutting-edge medical science with compassionate patient care."
+    ],
+    "values": [
+      { "icon": "Award", "title": "Clinical Excellence", "description": "Board-certified dermatologists delivering evidence-based, precision skin care." },
+      { "icon": "Shield", "title": "Patient Safety First", "description": "Strict sterilization and infection-control protocols to ensure your complete safety." },
+      { "icon": "Users", "title": "Inclusive Care", "description": "Comprehensive dermatology for all skin types, tones, ages, and conditions." },
+      { "icon": "Heart", "title": "Personalized Treatment", "description": "Customized treatment plans tailored to each patient's unique skin profile and needs." }
+    ],
+    "stats": []
+  },
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "10 Daily Habits for Healthy Skin",
+      "slug": "10-daily-habits-healthy-skin",
+      "excerpt": "Discover dermatologist-approved daily habits to maintain radiant, healthy skin all year round.",
+      "content": "Healthy skin starts with consistent daily habits recommended by dermatologists. Here are our top 10 tips: 1. Always apply broad-spectrum SPF 30+ sunscreen, 2. Cleanse gently twice daily, 3. Moisturize immediately after washing, 4. Stay hydrated — drink 8 glasses of water, 5. Eat an antioxidant-rich diet, 6. Avoid touching your face, 7. Change pillowcases regularly, 8. Manage stress with mindfulness, 9. Get 7–8 hours of quality sleep, 10. Schedule annual full-body skin check-ups.",
+      "author": "Dr. Priya Sharma",
+      "date": "2024-01-15",
+      "category": "Skin Health",
+      "image": "/assets/blog-skin-habits.jpg",
+      "readTime": "5 min read"
+    },
+    {
+      "id": 2,
+      "title": "Understanding Acne: Causes, Types & Treatments",
+      "slug": "understanding-acne-causes-treatments",
+      "excerpt": "A comprehensive guide to understanding acne and the most effective medical treatments available.",
+      "content": "Acne is one of the most common skin conditions affecting millions worldwide. It occurs when hair follicles become clogged with oil and dead skin cells. Types include whiteheads, blackheads, papules, pustules, nodules, and cysts. Medical treatments range from topical retinoids, benzoyl peroxide, and salicylic acid to oral antibiotics, hormonal therapy, and isotretinoin for severe cases. Advanced clinical options include chemical peels, laser therapy, and corticosteroid injections. Always consult a board-certified dermatologist for a personalized treatment plan.",
+      "author": "Dr. Arjun Mehta",
+      "date": "2024-01-10",
+      "category": "Acne Treatment",
+      "image": "/assets/blog-acne.jpg",
+      "readTime": "6 min read"
+    },
+    {
+      "id": 3,
+      "title": "Sun Protection: Why SPF Is Non-Negotiable",
+      "slug": "sun-protection-spf-guide",
+      "excerpt": "Everything you need to know about sunscreen, UV damage, and protecting your skin from skin cancer.",
+      "content": "UV radiation is the leading cause of premature skin aging and skin cancer. Dermatologists universally recommend daily sunscreen use, even on cloudy days and indoors near windows. Choose a broad-spectrum SPF 30 or higher, apply generously 15 minutes before sun exposure, and reapply every 2 hours. Physical sunscreens containing zinc oxide or titanium dioxide are ideal for sensitive skin. Pair sunscreen with protective clothing, wide-brimmed hats, and UV-blocking sunglasses for comprehensive protection. Annual skin checks are vital for early detection of melanoma and other skin cancers.",
+      "author": "Dr. Nisha Kapoor",
+      "date": "2024-01-05",
+      "category": "Sun Care",
+      "image": "/assets/blog-suncare.jpg",
+      "readTime": "4 min read"
+    },
+    {
+      "id": 4,
+      "title": "Anti-Aging Dermatology: What Really Works",
+      "slug": "anti-aging-dermatology",
+      "excerpt": "A dermatologist's guide to the most scientifically proven anti-aging treatments and skincare ingredients.",
+      "content": "The anti-aging skincare market is saturated with claims, but dermatologists rely on science-backed ingredients and procedures. Retinoids (vitamin A derivatives) remain the gold standard for reducing fine lines, wrinkles, and improving skin texture. Vitamin C serums provide powerful antioxidant protection. Hyaluronic acid delivers deep hydration. In-clinic treatments include botulinum toxin (Botox) for dynamic wrinkles, dermal fillers for volume restoration, fractional laser resurfacing, microneedling with PRP, and chemical peels. The best anti-aging approach combines medical-grade skincare with clinical treatments tailored to your skin's specific aging pattern.",
+      "author": "Dr. Priya Sharma",
+      "date": "2024-01-20",
+      "category": "Anti-Aging",
+      "image": "/assets/blog-antiaging.jpg",
+      "readTime": "6 min read"
+    }
+  ],
+  "contactContent": {
+    "heading": "Contact Us",
+    "subheading": "Have questions or want to book a consultation? Our dermatology team is here to help.",
+    "formLabels": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "service": "Treatment of Interest",
+      "message": "Describe Your Skin Concern",
+      "submit": "Send Message"
+    }
+  },
+  "contactInfoItems": [
+    {
+      "icon": "MapPin",
+      "title": "Visit Us",
+      "content": "456 MediCare Avenue, Suite 200",
+      "subContent": "City, ST 12345",
+      "action": "Get Directions",
+      "href": "#map"
+    },
+    {
+      "icon": "Phone",
+      "title": "Call Us",
+      "content": "+91 98765 43210",
+      "subContent": "Available during clinic hours",
+      "action": "Call Now",
+      "href": "tel:+919876543210"
+    },
+    {
+      "icon": "Mail",
+      "title": "Email Us",
+      "content": "care@dermacareClinic.com",
+      "subContent": "We reply within 24 hours",
+      "action": "Send Email",
+      "href": "mailto:care@dermacareClinic.com"
+    },
+    {
+      "icon": "Clock",
+      "title": "Clinic Hours",
+      "content": "Mon - Fri: 9:00 AM - 7:00 PM",
+      "subContent": "Sat: 9:00 AM - 4:00 PM | Sun: Closed",
+      "action": "Book Consultation",
+      "href": "#"
+    }
+  ],
+  "homeContent": {
+    "hero": {
+      "headline": "DermaCare",
+      "subheadline": "Advanced Dermatology & Skin Health",
+      "ctaLabel": "Book a Consultation",
+      "image": "/assets/hero-derma.jpg"
+    },
+    "aboutPreview": {
+      "heading": "About Our Clinic",
+      "body": [
+        "At DermaCare Clinic, we combine the latest medical advancements with compassionate, patient-centered care. Our team of board-certified dermatologists specializes in diagnosing and treating all skin, hair, and nail conditions using evidence-based, FDA-approved treatments.",
+        "We believe every patient deserves personalized attention and expert guidance. Our state-of-the-art facility is designed to provide a comfortable, professional environment where your skin health is our top priority."
+      ],
+      "features": [
+        { "icon": "Award", "title": "15+ Years of Excellence", "description": "Leading dermatology care trusted by thousands of patients" },
+        { "icon": "Shield", "title": "Sterile & Safe Environment", "description": "Highest clinical hygiene standards maintained at all times" },
+        { "icon": "Users", "title": "Board-Certified Specialists", "description": "Expert dermatologists with subspecialty training" },
+        { "icon": "Star", "title": "FDA-Approved Treatments", "description": "Only clinically proven, science-backed procedures" }
+      ],
+      "ctaLabel": "Read More About Us"
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "body": [
+        "To be the most trusted, patient-first dermatology clinic — providing world-class skin health solutions in a safe, welcoming, and technologically advanced environment that empowers every patient to feel confident in their skin.",
+        "We are committed to continuous medical education, cutting-edge research, and a holistic approach to skin wellness that addresses not just symptoms, but root causes."
+      ],
+      "images": ["/assets/clinic1.jpg", "/assets/clinic2.jpg", "/assets/clinic3.jpg"],
+      "stats": [
+        { "number": "100%", "label": "Certified Specialists" },
+        { "number": "30+", "label": "Treatment Options" },
+        { "number": "15+", "label": "Years in Practice" },
+        { "number": "10,000+", "label": "Patients Treated" }
+      ]
+    }
+  },
+  "stickySections": [
+    {
+      "title": "Medical Dermatology",
+      "subtitle": "Diagnose & Heal",
+      "description": "Accurate diagnosis and effective treatment of skin diseases including eczema, psoriasis, rosacea, fungal infections, and skin cancer screenings.",
+      "image": "/assets/medical-derma.jpg",
+      "stats": [
+        { "value": "30+", "label": "Conditions Treated" },
+        { "value": "100%", "label": "Evidence-Based Care" }
+      ]
+    },
+    {
+      "title": "Cosmetic Dermatology",
+      "subtitle": "Refresh & Rejuvenate",
+      "description": "From Botox and dermal fillers to laser resurfacing and chemical peels, we help you look and feel your absolute best at every age.",
+      "image": "/assets/cosmetic-derma.jpg",
+      "stats": [
+        { "value": "20+", "label": "Aesthetic Procedures" },
+        { "value": "Premium", "label": "FDA-Approved Products" }
+      ]
+    },
+    {
+      "title": "Pediatric & Hair Dermatology",
+      "subtitle": "Complete Skin Wellness",
+      "description": "Specialized care for children's sensitive skin conditions and advanced trichology services for hair loss, scalp disorders, and nail health.",
+      "image": "/assets/hair-derma.jpg",
+      "stats": [
+        { "value": "Expert", "label": "Pediatric Skin Care" },
+        { "value": "Advanced", "label": "Hair & Scalp Therapy" }
+      ]
+    }
+  ],
+  "navigationConfig": {
+    "leftNavigation": [
+      { "name": "About", "href": "/about" },
+      { "name": "Treatments", "href": "/services" }
+    ],
+    "rightNavigation": [
+      { "name": "Blog", "href": "/blogs" },
+      { "name": "Contact", "href": "/contact" }
+    ],
+    "quickLinks": [
+      { "name": "About Us", "href": "/about" },
+      { "name": "Our Treatments", "href": "/services" },
+      { "name": "Blog", "href": "/blogs" },
+      { "name": "Contact Us", "href": "/contact" },
+      { "name": "Book Consultation", "href": "/contact" }
+    ],
+    "servicesConfig": [
+      { "name": "Acne & Pimple Treatment", "href": "/services" },
+      { "name": "Anti-Aging & Botox", "href": "/services" },
+      { "name": "Laser Skin Resurfacing", "href": "/services" },
+      { "name": "Hair Loss Treatment (PRP)", "href": "/services" },
+      { "name": "Skin Cancer Screening", "href": "/services" }
+    ]
+  },
+  "services": [
+    {
+      "id": 1,
+      "name": "Acne & Scar Treatment",
+      "slug": "acne-scar-treatment",
+      "category": "Medical Dermatology",
+      "description": "Comprehensive acne diagnosis and advanced treatment to clear breakouts and minimize scarring permanently.",
+      "price": 60,
+      "duration": 45,
+      "image": "/assets/service-acne.jpg",
+      "benefits": [
+        "Personalized skin analysis",
+        "Medical-grade topical treatments",
+        "Laser or chemical peel options",
+        "Long-term clear-skin strategy"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Laser Skin Resurfacing",
+      "slug": "laser-skin-resurfacing",
+      "category": "Cosmetic Dermatology",
+      "description": "FDA-approved fractional laser treatment to reduce wrinkles, sun damage, scars, and uneven skin tone.",
+      "price": 200,
+      "duration": 60,
+      "image": "/assets/service-laser.jpg",
+      "benefits": [
+        "Stimulates collagen production",
+        "Reduces fine lines and wrinkles",
+        "Improves skin texture and tone",
+        "Minimal downtime"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Botox & Dermal Fillers",
+      "slug": "botox-dermal-fillers",
+      "category": "Cosmetic Dermatology",
+      "description": "Expert administration of botulinum toxin and hyaluronic acid fillers for natural-looking facial rejuvenation.",
+      "price": 300,
+      "duration": 45,
+      "image": "/assets/service-botox.jpg",
+      "benefits": [
+        "Smooths dynamic wrinkles",
+        "Restores facial volume",
+        "Non-surgical and quick",
+        "Results last 6–12 months"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "PRP Hair Loss Therapy",
+      "slug": "prp-hair-loss-therapy",
+      "category": "Hair Dermatology",
+      "description": "Platelet-Rich Plasma (PRP) therapy to stimulate hair follicles, reduce hair loss, and promote natural regrowth.",
+      "price": 180,
+      "duration": 60,
+      "image": "/assets/service-prp.jpg",
+      "benefits": [
+        "Uses your body's own growth factors",
+        "Stimulates dormant hair follicles",
+        "Safe with minimal side effects",
+        "Visible results in 3–6 sessions"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Skin Cancer Screening",
+      "slug": "skin-cancer-screening",
+      "category": "Medical Dermatology",
+      "description": "Full-body mole mapping and skin cancer screening using dermoscopy for early detection and peace of mind.",
+      "price": 120,
+      "duration": 60,
+      "image": "/assets/service-screening.jpg",
+      "benefits": [
+        "Full-body dermoscopic exam",
+        "Digital mole mapping",
+        "Early melanoma detection",
+        "Biopsy if required"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Chemical Peel & Brightening",
+      "slug": "chemical-peel-brightening",
+      "category": "Cosmetic Dermatology",
+      "description": "Medical-grade chemical peels to exfoliate, brighten, and renew skin tone and texture for a radiant complexion.",
+      "price": 150,
+      "duration": 75,
+      "image": "/assets/service-peel.jpg",
+      "benefits": [
+        "Exfoliates dead skin cells",
+        "Reduces pigmentation & dark spots",
+        "Improves skin clarity and glow",
+        "Customized peel depth"
+      ]
+    }
+  ],
+  "siteConfig": {
+    "name": "DermaCare Clinic",
+    "tagline": "Advanced Dermatology & Skin Health",
+    "description": "Experience expert dermatological care at DermaCare Clinic. Board-certified specialists providing medical and cosmetic skin treatments.",
+    "phone": "+91 86559 25011",
+    "email": "care@dermacareClinic.com",
+    "address": "456 MediCare Avenue, Suite 200",
+    "cityState": "City, State 12345",
+    "bookingUrl": "/contact",
+    "businessHours": [
+      "Mon - Fri: 9:00 AM - 7:00 PM",
+      "Saturday: 9:00 AM - 4:00 PM",
+      "Sunday: Closed"
+    ],
+    "socialLinks": {},
+    "seo": {
+      "title": "DermaCare Clinic | Advanced Dermatology & Skin Health",
+      "description": "Expert dermatological care including acne treatment, laser therapy, Botox, PRP hair loss treatment, and skin cancer screening. Book your consultation today.",
+      "keywords": [
+        "dermatologist",
+        "skin clinic",
+        "acne treatment",
+        "laser skin treatment",
+        "Botox",
+        "PRP therapy",
+        "hair loss treatment",
+        "skin cancer screening",
+        "cosmetic dermatology",
+        "medical dermatology"
+      ],
+      "ogTitle": "DermaCare Clinic | Advanced Dermatology & Skin Health",
+      "ogDescription": "Board-certified dermatologists providing world-class skin, hair, and nail care at DermaCare Clinic."
+    }
+  },
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Dr. Priya Sharma",
+      "role": "Chief Dermatologist & Founder",
+      "bio": "MD, FAAD — With 15+ years of clinical experience, Dr. Priya Sharma specializes in medical and cosmetic dermatology, laser treatments, and skin cancer management.",
+      "image": "/assets/doctor1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Arjun Mehta",
+      "role": "Cosmetic Dermatologist",
+      "bio": "DNB Dermatology — Dr. Arjun Mehta is an expert in aesthetic procedures including Botox, dermal fillers, chemical peels, and anti-aging treatments.",
+      "image": "/assets/doctor2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Nisha Kapoor",
+      "role": "Trichologist & Hair Specialist",
+      "bio": "MD Dermatology, Fellowship in Trichology — Dr. Nisha Kapoor specializes in hair loss disorders, PRP therapy, and pediatric dermatology.",
+      "image": "/assets/doctor3.jpg"
+    }
+  ],
+  "testimonials": []
+}

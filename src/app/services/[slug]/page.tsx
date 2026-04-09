@@ -1,5 +1,5 @@
 ﻿import { notFound } from 'next/navigation';
-import { services } from '@/lib/data';
+import { services } from '@/content';
 import ServiceDetailPageClient from '@/components/service-detail-page';
 
 interface ServicePageProps {

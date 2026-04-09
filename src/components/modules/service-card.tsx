@@ -126,14 +126,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
               <Clock className="h-4 w-4 text-[#7A2828]" />
               <span>{service.duration} min</span>
             </motion.div>
-            <motion.div
-              className="flex items-center gap-1"
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <IndianRupee className="h-4 w-4 text-[#7A2828]" />
-              <span>from ₹{service.price}</span>
-            </motion.div>
           </div>
         </CardContent>
 

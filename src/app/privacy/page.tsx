@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <div className="prose prose-lg max-w-none">
             <div className="mb-8 rounded-2xl border border-[#e5e5e5] bg-[#f5f5f5] p-8">
               <p className="m-0 leading-relaxed text-[#666666]">
-                Your privacy is important to us. It is Tribe Salon&apos;s policy
+                Your privacy is important to us. It is DermaCare Clinic&apos;s policy
                 to respect your privacy regarding any information we may collect
                 from you across our website.
               </p>
@@ -130,10 +130,10 @@ export default function PrivacyPage() {
                   If you have any questions about our privacy policy, please
                   contact us at{' '}
                   <a
-                    href="mailto:privacy@tribesalon.com"
+                    href="mailto:privacy@dermacareclinic.com"
                     className="font-semibold text-[#0a0a0a] transition-colors hover:text-[#c5a47e]"
                   >
-                    privacy@tribesalon.com
+                    privacy@dermacareclinic.com
                   </a>
                 </p>
               </section>

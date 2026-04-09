@@ -7,6 +7,8 @@ import { StickyScrollSection } from '@/components/modules/sticky-scroll-section'
 import { FeaturedServices } from '@/components/modules/featured-services';
 import { LatestBlogs } from '@/components/modules/latest-blogs';
 import { ContactBlock } from '@/components/modules/contact-block';
+import { ResultsGallery } from '@/components/modules/results-gallery';
+import { TestimonialsCarousel } from '@/components/modules/testimonials-carousel';
 import { motion } from 'framer-motion';
 import { BookButton } from '@/components/modules/book-button';
 import { Calendar } from 'lucide-react';
@@ -28,6 +30,12 @@ export default function Home() {
 
       {/* Featured Services */}
       <FeaturedServices />
+
+      {/* Results Gallery */}
+      <ResultsGallery />
+
+      {/* Verified Testimonials */}
+      <TestimonialsCarousel />
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-[#0a0a0a] py-24 text-white md:py-32">

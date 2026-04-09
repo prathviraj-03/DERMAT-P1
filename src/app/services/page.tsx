@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { services } from '@/lib/data';
+import { services } from '@/content';
 import { motion } from 'framer-motion';
 import { Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { useState } from 'react';
@@ -161,16 +161,9 @@ export default function ServicesPage() {
                         {service.category}
                       </span>
                     </div>
-
-                    {/* Price Tag */}
-                    <div className="absolute right-4 bottom-4">
-                      <span className="rounded-full bg-[#c5a47e] px-4 py-2 text-sm font-bold text-white shadow-lg">
-                        ₹{service.price}
-                      </span>
                     </div>
-                  </div>
 
-                  {/* Content */}
+                    {/* Content */}
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="mb-2 text-xl font-bold text-[#1a1a1a] transition-colors duration-300 group-hover:text-[#c5a47e]">
                       {service.name}

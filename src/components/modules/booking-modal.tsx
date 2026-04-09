@@ -9,15 +9,18 @@ import { useBooking } from '@/hooks/use-booking';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { services } from '@/lib/data';
+import { services, teamMembers } from '@/content';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const bookingSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email'),
   phone: z.string().min(10, 'Phone number is required'),
   service: z.string().min(1, 'Please select a service'),
+  doctor: z.string().min(1, 'Please select a specialist'),
   date: z.string().min(1, 'Date is required'),
+  time: z.string().min(1, 'Time slot is required'),
 });
 
 type BookingFormValues = z.infer<typeof bookingSchema>;
@@ -26,6 +29,10 @@ export function BookingModal() {
   const { isOpen, closeBooking, preselectedService } = useBooking();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
+  const router = useRouter();
+
+  // Time slots dummy data
+  const timeSlots = ['10:00 AM', '11:00 AM', '12:00 PM', '02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM'];
 
   // Lock body scroll
   React.useEffect(() => {
@@ -61,14 +68,14 @@ export function BookingModal() {
     // Simulate booking (frontend only)
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log('Booking Data:', data);
-
-    setIsSuccess(true);
-    setTimeout(() => {
-      closeBooking();
-      setIsSuccess(false);
-      reset();
-    }, 3000);
+    
+    closeBooking();
+    reset();
     setIsSubmitting(false);
+
+    // Serialize data to URL
+    const query = new URLSearchParams(data as Record<string, string>).toString();
+    router.push(`/checkout?${query}`);
   };
 
   if (!isOpen) return null;
@@ -199,7 +206,7 @@ export function BookingModal() {
                   <option value="">Select a service</option>
                   {services.map((s) => (
                     <option key={s.id} value={s.slug}>
-                      {s.name} (₹{s.price})
+                      {s.name}
                     </option>
                   ))}
                 </select>
@@ -209,6 +216,53 @@ export function BookingModal() {
                   </p>
                 )}
               </div>
+
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="doctor" className="font-medium text-[#1a1a1a]">
+                    Doctor
+                  </Label>
+                  <select
+                    id="doctor"
+                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-4 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
+                    {...register('doctor')}
+                  >
+                    <option value="">Select Doctor</option>
+                    {teamMembers.map((doc) => (
+                      <option key={doc.id} value={doc.slug}>
+                        {doc.name}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.doctor && (
+                    <p className="text-xs text-red-500">
+                      {errors.doctor.message}
+                    </p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="time" className="font-medium text-[#1a1a1a]">
+                    Time Slot
+                  </Label>
+                  <select
+                    id="time"
+                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-4 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
+                    {...register('time')}
+                  >
+                    <option value="">Select Time</option>
+                    {timeSlots.map((t) => (
+                      <option key={t} value={t}>{t}</option>
+                    ))}
+                  </select>
+                  {errors.time && (
+                    <p className="text-xs text-red-500">
+                      {errors.time.message}
+                    </p>
+                  )}
+                </div>
+              </div>
+
               <div className="space-y-2">
                 <Label htmlFor="date" className="font-medium text-[#1a1a1a]">
                   Preferred Date

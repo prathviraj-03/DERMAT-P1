@@ -1,6 +1,6 @@
 'use client';
 
-import { blogPosts } from '@/lib/data';
+import { blogPosts } from '@/content';
 import { formatDate } from '@/lib/utils';
 import { Calendar, User, ArrowLeft, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -132,12 +132,12 @@ export default function BlogPostPageClient({ post, relatedPosts }: Props) {
                   </div>
                   <div>
                     <h4 className="font-bold text-[#1a1a1a]">{post.author}</h4>
-                    <p className="text-sm text-[#666666]">Beauty Expert</p>
+                    <p className="text-sm text-[#666666]">Medical Expert</p>
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed text-[#666666]">
                   Our expert team shares their knowledge and tips to help you
-                  look and feel your best.
+                  maintain optimal skin health.
                 </p>
               </div>
 

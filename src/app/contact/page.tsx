@@ -12,7 +12,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Salon Street, Suite 100',
+      content: '456 MediCare Avenue, Suite 200',
       subContent: 'City, ST 12345',
       action: 'Get Directions',
       href: '#map',
@@ -21,24 +21,24 @@ export default function ContactPage() {
       icon: Phone,
       title: 'Call Us',
       content: '+91 98765 43210',
-      subContent: 'Available during business hours',
+      subContent: 'Available during clinic hours',
       action: 'Call Now',
       href: 'tel:+919876543210',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@tribesalon.com',
+      content: 'care@dermacareClinic.com',
       subContent: 'We reply within 24 hours',
       action: 'Send Email',
-      href: 'mailto:hello@tribesalon.com',
+      href: 'mailto:care@dermacareClinic.com',
     },
     {
       icon: Clock,
-      title: 'Opening Hours',
-      content: 'Mon - Fri: 9:00 AM - 8:00 PM',
-      subContent: 'Sat: 10:00 AM - 6:00 PM',
-      action: 'Book Appointment',
+      title: 'Clinic Hours',
+      content: 'Mon - Fri: 9:00 AM - 7:00 PM',
+      subContent: 'Sat: 9:00 AM - 4:00 PM',
+      action: 'Book Consultation',
       href: '#',
     },
   ];
@@ -86,7 +86,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="max-w-2xl text-xl leading-relaxed text-[#f5f0e8]/70">
-              Have questions or ready to book an appointment? We&apos;d love to
+              Have questions or ready to book a consultation? We&apos;d love to
               hear from you.
             </p>
           </motion.div>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                 className="relative h-80 overflow-hidden rounded-2xl border border-[#e5e5e5] bg-[#f5f5f5] shadow-xl"
               >
                 <iframe
-                  title="Tribe Salon Location"
+                  title="DermaCare Clinic Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9851287052066!2d77.59016631482225!3d12.971598990854424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
@@ -189,10 +189,10 @@ export default function ContactPage() {
                     <MapPin className="h-5 w-5 text-[#c5a47e]" />
                     <div>
                       <p className="text-sm font-semibold text-[#1a1a1a]">
-                        Tribe Salon
+                        DermaCare Clinic
                       </p>
                       <p className="text-xs text-[#666666]">
-                        123 Salon Street, City
+                        456 MediCare Avenue, Suite 200
                       </p>
                     </div>
                   </div>
@@ -219,11 +219,11 @@ export default function ContactPage() {
                   <div className="mb-4 flex-1 space-y-3 text-sm text-[#666666]">
                     <div className="flex justify-between">
                       <span>Monday - Friday</span>
-                      <span className="font-semibold">9:00 AM - 8:00 PM</span>
+                      <span className="font-semibold">9:00 AM - 7:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Saturday</span>
-                      <span className="font-semibold">10:00 AM - 6:00 PM</span>
+                      <span className="font-semibold">9:00 AM - 4:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Sunday</span>

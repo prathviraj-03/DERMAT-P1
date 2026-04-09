@@ -2,56 +2,14 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-
-interface StickyImageSection {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  stats?: { value: string; label: string }[];
-}
-
-const sections: StickyImageSection[] = [
-  {
-    title: 'Hair Excellence',
-    subtitle: 'Transform Your Look',
-    description:
-      'From classic cuts to avant-garde styles, our master stylists bring your vision to life with precision and creativity.',
-    image: '/assets/Hair.jpg',
-    stats: [
-      { value: '20+', label: 'Styling Techniques' },
-      { value: '100%', label: 'Client Satisfaction' },
-    ],
-  },
-  {
-    title: 'Skin Radiance',
-    subtitle: 'Glow From Within',
-    description:
-      'Experience transformative skincare treatments that reveal your natural radiance and restore youthful vitality.',
-    image: '/assets/Skin.jpg',
-    stats: [
-      { value: '15+', label: 'Treatment Options' },
-      { value: 'Premium', label: 'Products Only' },
-    ],
-  },
-  {
-    title: 'Complete Grooming',
-    subtitle: 'Refined & Polished',
-    description:
-      'Comprehensive grooming services for the modern individual who values attention to detail and personal presentation.',
-    image: '/assets/grooming.jpg',
-    stats: [
-      { value: 'Expert', label: 'Barbers' },
-      { value: 'Luxury', label: 'Experience' },
-    ],
-  },
-];
+import { stickySections } from '@/content';
+import { StickySectionItem } from '@/types';
 
 function StickySection({
   section,
   index,
 }: {
-  section: StickyImageSection;
+  section: StickySectionItem;
   index: number;
 }) {
   const ref = useRef(null);
@@ -169,7 +127,7 @@ export function StickyScrollSection() {
       </div>
 
       {/* Sticky Sections */}
-      {sections.map((section, index) => (
+      {stickySections.map((section, index) => (
         <StickySection key={index} section={section} index={index} />
       ))}
     </section>

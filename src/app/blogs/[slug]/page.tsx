@@ -1,5 +1,5 @@
 ﻿import { notFound } from 'next/navigation';
-import { blogPosts } from '@/lib/data';
+import { blogPosts } from '@/content';
 import BlogPostPageClient from '@/components/blog-post-page';
 
 interface BlogPostPageProps {

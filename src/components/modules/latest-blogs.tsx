@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { blogPosts } from '@/lib/data';
+import { blogPosts } from '@/content';
 import { Button } from '@/components/ui/button';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Calendar, ArrowRight } from 'lucide-react';

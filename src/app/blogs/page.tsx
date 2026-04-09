@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { blogPosts } from '@/lib/data';
+import { blogPosts } from '@/content';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 

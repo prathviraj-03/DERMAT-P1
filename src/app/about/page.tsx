@@ -1,6 +1,6 @@
 'use client';
 
-import { teamMembers } from '@/lib/data';
+import { teamMembers } from '@/content/team';
 import { motion } from 'framer-motion';
 import { Award, Shield, Users, Heart, CheckCircle } from 'lucide-react';
 
@@ -35,9 +35,15 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#2c1810] via-[#1a0f0a] to-[#0f0705] py-32">
+      <section className="relative overflow-hidden bg-[#2c1810] py-32">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000')" }}
+        />
+        
         {/* Background gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
         {/* Elegant background pattern */}
         <div className="absolute inset-0">
@@ -70,16 +76,16 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-4 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
             >
-              About Oceanic Salon
+              About DermaCare Clinic
             </motion.span>
             <h1 className="mb-6 font-serif text-5xl leading-tight font-bold text-[#f5f0e8] md:text-6xl lg:text-7xl">
               Our Story
             </h1>
             <p className="max-w-2xl text-xl leading-relaxed text-[#f5f0e8]/70">
-              Founded in 2020, Oceanic Salon was born from a desire to create a
-              welcoming space where everyone can enjoy premium grooming
-              services. We believe that self-care is for everyone, regardless of
-              gender or style.
+              Founded in 2020, DermaCare Clinic was born from a desire to create a
+              space where clinical expertise meets patient comfort. We believe that
+              everyone deserves access to personalized skin health solutions and procedures
+              that enhance their confidence.
             </p>
           </motion.div>
         </div>
@@ -104,7 +110,9 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {values.map((value, index) => (
+              {values.map((value, index) => {
+                const Icon = value.icon;
+                return (
                 <motion.div
                   key={value.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -116,7 +124,7 @@ export default function AboutPage() {
                 >
                   <div className="h-full rounded-3xl border border-[#e8e8e8] bg-[#fafafa] p-8 text-center transition-all duration-300 hover:border-[#c5a47e]/30 hover:bg-white hover:shadow-xl">
                     <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0a0a0a] transition-colors duration-300 group-hover:bg-[#c5a47e]">
-                      <value.icon className="h-7 w-7 text-white" />
+                      {Icon && <Icon className="h-7 w-7 text-white" />}
                     </div>
                     <h3 className="mb-3 text-xl font-bold text-[#0a0a0a]">
                       {value.title}
@@ -126,7 +134,7 @@ export default function AboutPage() {
                     </p>
                   </div>
                 </motion.div>
-              ))}
+              )})}
             </div>
           </motion.section>
 

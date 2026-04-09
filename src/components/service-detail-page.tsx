@@ -1,6 +1,6 @@
 'use client';
 
-import { services } from '@/lib/data';
+import { services } from '@/content';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Clock, IndianRupee, Check, ArrowLeft, ArrowRight } from 'lucide-react';
@@ -56,10 +56,6 @@ export default function ServiceDetailPageClient({
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5" />
                 <span>{service.duration} min</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <IndianRupee className="h-5 w-5" />
-                <span>From ₹{service.price}</span>
               </div>
             </div>
           </motion.div>
@@ -147,10 +143,6 @@ export default function ServiceDetailPageClient({
                   </p>
                 </div>
                 <div className="mb-6 rounded-xl bg-white/10 p-4">
-                  <div className="mb-2 flex items-center justify-between">
-                    <span className="text-white/70">Price</span>
-                    <span className="text-2xl font-bold">₹{service.price}</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/70">Duration</span>
                     <span className="font-semibold">
@@ -164,9 +156,6 @@ export default function ServiceDetailPageClient({
                 >
                   Book Appointment <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <p className="mt-4 text-center text-xs text-white/60">
-                  * Prices may vary based on hair length and stylist level
-                </p>
               </div>
 
               <div className="rounded-2xl border border-[#e5e5e5] bg-[#f5f5f5] p-6">
@@ -210,7 +199,7 @@ export default function ServiceDetailPageClient({
                     {related.name}
                   </h3>
                   <p className="text-sm text-[#666666]">
-                    From ₹{related.price} • {related.duration} min
+                    {related.duration} min
                   </p>
                 </Link>
               ))}

@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { homeContent } from '@/content';
 
 export function VisionSection() {
   const ref = useRef(null);
@@ -36,7 +37,7 @@ export function VisionSection() {
               >
                 <div
                   className="h-full w-full bg-cover bg-center"
-                  style={{ backgroundImage: 'url(/assets/v1.jpg)' }}
+                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800')" }}
                 />
               </motion.div>
             </motion.div>
@@ -60,7 +61,7 @@ export function VisionSection() {
               >
                 <div
                   className="h-full w-full bg-cover bg-center"
-                  style={{ backgroundImage: 'url(/assets/v2.jpg)' }}
+                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800')" }}
                 />
               </motion.div>
             </motion.div>
@@ -84,7 +85,7 @@ export function VisionSection() {
               >
                 <div
                   className="h-full w-full bg-cover bg-center"
-                  style={{ backgroundImage: 'url(/assets/v3.jpg)' }}
+                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800')" }}
                 />
               </motion.div>
             </motion.div>
@@ -131,7 +132,7 @@ export function VisionSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-serif text-4xl font-bold text-[#1a1a1a] md:text-5xl lg:text-6xl"
             >
-              Our Vision
+              {homeContent.vision.heading}
             </motion.h2>
 
             <motion.div
@@ -141,18 +142,11 @@ export function VisionSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-[#666666] md:text-xl">
-                To be a customer-centric salon chain, Tribe Unisex Salon warmly
-                welcomes all customers for a world-class experience that takes
-                them on a high level in terms of quality hair, beauty, & skin
-                services in a hygienic, relaxed, comfortable environment to make
-                their day fabulous.
-              </p>
-              <p className="text-lg leading-relaxed text-[#666666]">
-                We believe in the power of transformation through expert care,
-                premium products, and personalized attention that makes every
-                visit an unforgettable experience.
-              </p>
+              {homeContent.vision.body.map((para, idx) => (
+                <p key={idx} className={`text-lg leading-relaxed text-[#666666] ${idx === 0 ? 'md:text-xl' : ''}`}>
+                  {para}
+                </p>
+              ))}
             </motion.div>
 
             {/* Features */}
@@ -163,12 +157,7 @@ export function VisionSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="grid grid-cols-2 gap-6 pt-6"
             >
-              {[
-                { number: '100%', label: 'Hygiene Standards' },
-                { number: '50+', label: 'Expert Stylists' },
-                { number: '10+', label: 'Years Experience' },
-                { number: '5000+', label: 'Happy Clients' },
-              ].map((stat, index) => (
+              {homeContent.vision.stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}

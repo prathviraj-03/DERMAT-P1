@@ -65,7 +65,7 @@ export default function TermsPage() {
                   Terms
                 </h2>
                 <p className="leading-relaxed text-[#666666]">
-                  By accessing the website at Tribe Salon, you are agreeing to
+                  By accessing the website at DermaCare Clinic, you are agreeing to
                   be bound by these terms of service, all applicable laws and
                   regulations, and agree that you are responsible for compliance
                   with any applicable local laws.
@@ -96,8 +96,8 @@ export default function TermsPage() {
                 </h2>
                 <p className="leading-relaxed text-[#666666]">
                   All prices are subject to change without notice. Final prices
-                  may vary based on hair length, condition, and stylist level.
-                  Additional services requested during your appointment will be
+                  may vary based on treatment area, condition, and specialist level.
+                  Additional treatments requested during your consultation will be
                   charged accordingly.
                 </p>
               </section>
@@ -111,7 +111,7 @@ export default function TermsPage() {
                 </h2>
                 <p className="leading-relaxed text-[#666666]">
                   Permission is granted to temporarily download one copy of the
-                  materials (information or software) on Tribe Salon&apos;s
+                  materials (information or software) on DermaCare Clinic&apos;s
                   website for personal, non-commercial transitory viewing only.
                 </p>
               </section>
@@ -124,8 +124,8 @@ export default function TermsPage() {
                   Disclaimer
                 </h2>
                 <p className="leading-relaxed text-[#666666]">
-                  The materials on Tribe Salon&apos;s website are provided on an
-                  &apos;as is&apos; basis. Tribe Salon makes no warranties,
+                  The materials on DermaCare Clinic&apos;s website are provided on an
+                  &apos;as is&apos; basis. DermaCare Clinic makes no warranties,
                   expressed or implied, and hereby disclaims and negates all
                   other warranties including, without limitation, implied
                   warranties or conditions of merchantability, fitness for a
@@ -142,7 +142,7 @@ export default function TermsPage() {
                   Modifications
                 </h2>
                 <p className="leading-relaxed text-[#666666]">
-                  Oceanic Salon may revise these terms of service at any time
+                  DermaCare Clinic may revise these terms of service at any time
                   without notice. By using this website you are agreeing to be
                   bound by the then current version of these terms of service.
                 </p>
@@ -159,10 +159,10 @@ export default function TermsPage() {
                   If you have any questions about these Terms of Service, please
                   contact us at{' '}
                   <a
-                    href="mailto:legal@tribesalon.com"
+                    href="mailto:legal@dermacareclinic.com"
                     className="font-semibold text-[#0a0a0a] transition-colors hover:text-[#c5a47e]"
                   >
-                    legal@Oceanicsalon.com
+                    legal@dermacareclinic.com
                   </a>
                 </p>
               </section>
