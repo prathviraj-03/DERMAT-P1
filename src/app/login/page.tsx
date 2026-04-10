@@ -11,6 +11,9 @@ import { Lock, Phone, User as UserIcon } from 'lucide-react';
 import Link from 'next/link';
 
 export default function LoginPage() {
+  const [isRegistering, setIsRegistering] = React.useState(false);
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [error, setError] = React.useState('');
@@ -22,9 +25,26 @@ export default function LoginPage() {
     if (user?.role === 'admin') router.push('/dashboard/admin');
   }, [user, router]);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleAuth = (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    if (isRegistering) {
+      if (!name || !phone || !password) {
+        setError('Please fill in all required fields');
+        return;
+      }
+      
+      // Mock Register
+      login({
+        id: 'patient_new',
+        name: name,
+        phone: phone,
+        role: 'patient',
+      });
+      router.push('/dashboard/patient');
+      return;
+    }
 
     // Hardcoded Patient Details
     if (phone === '9999999999' && password === 'pass123') {
@@ -77,8 +97,8 @@ export default function LoginPage() {
                 <span className="text-[#c5a47e]"> Clinic</span>
               </span>
             </Link>
-            <h1 className="text-3xl font-serif font-bold text-[#1a1a1a] mb-2">Welcome Back</h1>
-            <p className="text-[#666666]">Access your medical records and appointments.</p>
+            <h1 className="text-3xl font-serif font-bold text-[#1a1a1a] mb-2">{isRegistering ? 'Create Account' : 'Welcome Back'}</h1>
+            <p className="text-[#666666]">{isRegistering ? 'Sign up for medical updates.' : 'Access your medical records and appointments.'}</p>
           </div>
 
           {error && (
@@ -91,7 +111,30 @@ export default function LoginPage() {
             </motion.div>
           )}
 
-          <form onSubmit={handleLogin} className="space-y-6 relative z-10">
+          <form onSubmit={handleAuth} className="space-y-6 relative z-10">
+            {isRegistering && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                className="space-y-2"
+              >
+                <Label htmlFor="name" className="text-[#1a1a1a] font-medium">Full Name</Label>
+                <div className="relative">
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#a3a3a3]">
+                    <UserIcon className="h-5 w-5" />
+                  </div>
+                  <Input
+                    id="name"
+                    required={isRegistering}
+                    placeholder="Enter your name"
+                    className="pl-10 h-12 rounded-xl border-[#e8e8e8] bg-[#fafafa] focus:bg-white text-[#1a1a1a] placeholder:text-[#a3a3a3]"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+              </motion.div>
+            )}
+
             <div className="space-y-2">
               <Label htmlFor="phone" className="text-[#1a1a1a] font-medium">Phone Number</Label>
               <div className="relative">
@@ -127,12 +170,37 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <Button
-              type="submit"
-              className="w-full h-12 bg-[#1a1a1a] hover:bg-[#c5a47e] text-white font-medium tracking-wide rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Sign In
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button
+                type="submit"
+                className="w-full sm:flex-1 h-12 bg-[#1a1a1a] hover:bg-[#c5a47e] text-white font-medium tracking-wide rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                {isRegistering ? 'Register' : 'Sign In'}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => router.push('/')}
+                className="w-full sm:flex-1 h-12 border-[#e8e8e8] text-[#1a1a1a] hover:bg-[#fafafa] font-medium tracking-wide rounded-xl"
+              >
+                Skip Login
+              </Button>
+            </div>
+            
+            <div className="text-center mt-4">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsRegistering(!isRegistering);
+                  setError('');
+                }}
+                className="text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors"
+              >
+                {isRegistering
+                  ? 'Already have an account? Sign in here'
+                  : "Don't have an account? Register here"}
+              </button>
+            </div>
           </form>
 
           {/* DEMO ACCOUNTS HELPER */}
