@@ -12,8 +12,28 @@ import { TestimonialsCarousel } from '@/components/modules/testimonials-carousel
 import { motion } from 'framer-motion';
 import { BookButton } from '@/components/modules/book-button';
 import { Calendar } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/components/providers/auth-provider';
 
 export default function Home() {
+  const { user } = useAuth();
+  const router = useRouter();
+  const [isInitializing, setIsInitializing] = useState(true);
+
+  useEffect(() => {
+    const hasSkipped = localStorage.getItem('mock_clinic_skipped_login');
+    if (!user && !hasSkipped) {
+      router.replace('/login');
+    } else {
+      setIsInitializing(false);
+    }
+  }, [user, router]);
+
+  if (isInitializing) {
+    return <div className="min-h-screen bg-[#fafafa] flex items-center justify-center">Loading...</div>;
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}

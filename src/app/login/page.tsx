@@ -180,7 +180,10 @@ export default function LoginPage() {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => router.push('/')}
+                onClick={() => {
+                  localStorage.setItem('mock_clinic_skipped_login', 'true');
+                  router.push('/');
+                }}
                 className="w-full sm:flex-1 h-12 border-[#e8e8e8] text-[#1a1a1a] hover:bg-[#fafafa] font-medium tracking-wide rounded-xl"
               >
                 Skip Login
