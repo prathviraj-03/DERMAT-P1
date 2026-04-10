@@ -61,7 +61,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-4 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
             >
               Premium Services
             </motion.span>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#c5a47e]/20 bg-[#c5a47e]/10 px-4 py-2 text-sm font-medium text-[#c5a47e]">
+            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#c5a47e]/20 bg-[#c5a47e]/10 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium text-[#c5a47e]">
               Ready to Transform?
             </span>
             <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">

@@ -22,9 +22,9 @@ export default function PatientDashboard() {
     <div className="min-h-screen bg-[#fafafa]">
       {/* Dashboard Header */}
       <div className="bg-gradient-to-br from-[#2c1810] via-[#1a0f0a] to-[#0f0705] pt-32 pb-24 text-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#c5a47e]/20 border-2 border-[#c5a47e]/30">
-             <span className="text-3xl font-serif text-[#c5a47e]">{user.name.charAt(0)}</span>
+             <span className="text-2xl md:text-3xl font-serif text-[#c5a47e]">{user.name.charAt(0)}</span>
           </div>
           <h1 className="text-4xl font-serif font-bold text-[#c5a47e]">Patient Portal</h1>
           <p className="text-white/70 mt-2 text-lg">Welcome back, {user.name}</p>
@@ -32,27 +32,27 @@ export default function PatientDashboard() {
       </div>
 
       {/* Dashboard Content */}
-      <div className="container mx-auto px-4 -mt-16 pb-24 flex flex-col md:flex-row gap-8 items-start">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 -mt-16 pb-24 flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
         {/* Sidebar Nav */}
         <div className="w-full md:w-64 bg-white rounded-3xl shadow-xl p-4 sticky top-24 shrink-0 border border-gray-100">
            <div className="space-y-2">
              <button 
                onClick={() => setActiveTab('appointments')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'appointments' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'appointments' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <Calendar className="h-5 w-5" />
                <span className="font-medium">Appointments</span>
              </button>
              <button 
                onClick={() => setActiveTab('prescriptions')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'prescriptions' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'prescriptions' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <FileText className="h-5 w-5" />
                <span className="font-medium">Prescriptions</span>
              </button>
              <button 
                onClick={() => setActiveTab('profile')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'profile' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'profile' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <User className="h-5 w-5" />
                <span className="font-medium">Profile</span>
@@ -65,8 +65,8 @@ export default function PatientDashboard() {
            {activeTab === 'appointments' && (
              <div className="space-y-6">
                 <div className="flex justify-between items-center mb-8 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">My Appointments</h2>
-                  <Link href="/book" className="px-4 py-2 bg-[#c5a47e] text-white rounded-full text-sm font-medium hover:bg-[#b08d66] transition">Book New</Link>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">My Appointments</h2>
+                  <Link href="/book" className="px-6 md:px-12 lg:px-16 py-2 bg-[#c5a47e] text-white rounded-full text-sm font-medium hover:bg-[#b08d66] transition">Book New</Link>
                 </div>
                 
                 {/* Upcoming Appointment Card */}
@@ -74,7 +74,7 @@ export default function PatientDashboard() {
                    <div className="absolute top-0 right-0 p-4">
                      <span className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Upcoming</span>
                    </div>
-                   <div className="flex items-start gap-4">
+                   <div className="flex items-center md:items-start text-center md:text-left gap-4">
                       <div className="h-14 w-14 rounded-xl bg-orange-100 text-orange-600 flex flex-col items-center justify-center shrink-0">
                          <span className="text-xs font-bold uppercase">Oct</span>
                          <span className="text-xl font-bold">24</span>
@@ -107,8 +107,8 @@ export default function PatientDashboard() {
                            </div>
                         </div>
                         <div className="mt-4 md:mt-0 flex gap-2">
-                           <button className="px-4 py-2 border border-gray-200 text-gray-600 rounded-xl text-sm font-medium hover:bg-gray-100 transition">View Details</button>
-                           <button className="px-4 py-2 border border-[#c5a47e] text-[#c5a47e] rounded-xl text-sm font-medium hover:bg-[#c5a47e]/10 transition">Book Again</button>
+                           <button className="px-6 md:px-12 lg:px-16 py-2 border border-gray-200 text-gray-600 rounded-xl text-sm font-medium hover:bg-gray-100 transition">View Details</button>
+                           <button className="px-6 md:px-12 lg:px-16 py-2 border border-[#c5a47e] text-[#c5a47e] rounded-xl text-sm font-medium hover:bg-[#c5a47e]/10 transition">Book Again</button>
                         </div>
                      </div>
                    ))}
@@ -119,7 +119,7 @@ export default function PatientDashboard() {
            {activeTab === 'prescriptions' && (
              <div className="space-y-6">
                 <div className="mb-8 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">My Prescriptions</h2>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">My Prescriptions</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -128,7 +128,7 @@ export default function PatientDashboard() {
                      { id: 'RX-7432', date: 'Aug 22, 2023', doctor: 'Dr. Robert Chen', condition: 'Routine Assessment' }
                    ].map((rx) => (
                      <div key={rx.id} className="border border-gray-200 rounded-2xl p-5 hover:border-[#c5a47e] hover:shadow-lg transition group bg-white">
-                        <div className="flex justify-between items-start mb-4">
+                        <div className="flex justify-between items-center md:items-start text-center md:text-left mb-4">
                            <div className="h-10 w-10 bg-[#c5a47e]/10 text-[#c5a47e] rounded-xl flex items-center justify-center">
                               <FileText className="h-5 w-5" />
                            </div>
@@ -149,32 +149,32 @@ export default function PatientDashboard() {
            {activeTab === 'profile' && (
              <div className="space-y-6 max-w-2xl">
                 <div className="mb-8 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Personal Profile</h2>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Personal Profile</h2>
                 </div>
                 
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-gray-700">Full Name</label>
-                      <input type="text" defaultValue={user.name} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
+                      <input type="text" defaultValue={user.name} className="w-full px-6 md:px-12 lg:px-16 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
                     </div>
                     <div className="space-y-2">
                        <label className="text-sm font-medium text-gray-700">Email Address</label>
-                       <input type="email" defaultValue={(user as any).email || 'john@example.com'} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
+                       <input type="email" defaultValue={(user as any).email || 'john@example.com'} className="w-full px-6 md:px-12 lg:px-16 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
                     </div>
                     <div className="space-y-2">
                        <label className="text-sm font-medium text-gray-700">Phone Number</label>
-                       <input type="tel" defaultValue="+1 (555) 000-0000" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
+                       <input type="tel" defaultValue="+1 (555) 000-0000" className="w-full px-6 md:px-12 lg:px-16 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
                     </div>
                     <div className="space-y-2">
                        <label className="text-sm font-medium text-gray-700">Date of Birth</label>
-                       <input type="date" defaultValue="1990-01-01" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
+                       <input type="date" defaultValue="1990-01-01" className="w-full px-6 md:px-12 lg:px-16 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition" />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700">Medical History Notes</label>
-                    <textarea rows={4} defaultValue="No known allergies. Previous treatment for mild eczema." className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition resize-none"></textarea>
+                    <textarea rows={4} defaultValue="No known allergies. Previous treatment for mild eczema." className="w-full px-6 md:px-12 lg:px-16 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:border-[#c5a47e] transition resize-none"></textarea>
                   </div>
 
                   <div className="pt-4 flex justify-end">

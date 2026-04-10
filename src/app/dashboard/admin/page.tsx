@@ -21,9 +21,9 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-[#fafafa]">
       {/* Dashboard Header */}
       <div className="bg-gradient-to-br from-[#2c1810] via-[#1a0f0a] to-[#0f0705] pt-32 pb-24 text-center">
-        <div className="container mx-auto px-4 flex flex-col items-center">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16 flex flex-col items-center">
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#c5a47e]/20 border-2 border-[#c5a47e]/30">
-             <span className="text-3xl font-serif text-[#c5a47e]">A</span>
+             <span className="text-2xl md:text-3xl font-serif text-[#c5a47e]">A</span>
           </div>
           <h1 className="text-4xl font-serif font-bold text-[#c5a47e]">Admin Console</h1>
           <p className="text-white/70 mt-2 text-lg">Hospital Management & Analytics</p>
@@ -31,27 +31,27 @@ export default function AdminDashboard() {
       </div>
 
       {/* Dashboard Content */}
-      <div className="container mx-auto px-4 -mt-16 pb-24 flex flex-col md:flex-row gap-8 items-start">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 -mt-16 pb-24 flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
         {/* Sidebar Nav */}
         <div className="w-full md:w-64 bg-white rounded-3xl shadow-xl p-4 sticky top-24 shrink-0 border border-gray-100">
            <div className="space-y-2">
              <button 
                onClick={() => setActiveTab('analytics')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'analytics' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'analytics' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <LineChart className="h-5 w-5" />
                <span className="font-medium">Analytics</span>
              </button>
              <button 
                onClick={() => setActiveTab('bookings')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'bookings' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'bookings' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <CalendarDays className="h-5 w-5" />
                <span className="font-medium">Bookings</span>
              </button>
              <button 
                onClick={() => setActiveTab('patients')}
-               className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${activeTab === 'patients' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
+               className={`w-full flex items-center gap-3 px-6 md:px-12 lg:px-16 py-3 rounded-2xl transition-all ${activeTab === 'patients' ? 'bg-[#c5a47e] text-white shadow-md' : 'text-gray-600 hover:bg-gray-50'}`}
              >
                <Users className="h-5 w-5" />
                <span className="font-medium">Patient Directory</span>
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
            {activeTab === 'analytics' && (
              <div className="space-y-8">
                 <div className="mb-6 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Overview Analytics</h2>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Overview Analytics</h2>
                 </div>
                 
                 {/* Stats Grid */}
@@ -75,7 +75,7 @@ export default function AdminDashboard() {
                       <span className="text-gray-500 font-medium">Total Revenue</span>
                       <div className="p-2 bg-green-100 text-green-700 rounded-lg"><DollarSign className="w-5 h-5"/></div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">$24,500</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">$24,500</h3>
                     <p className="text-sm text-green-600 flex items-center gap-1 mt-2"><TrendingUp className="w-4 h-4"/> +14% from last month</p>
                   </div>
                   
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
                       <span className="text-gray-500 font-medium">Appointments</span>
                       <div className="p-2 bg-blue-100 text-blue-700 rounded-lg"><CalendarIcon className="w-5 h-5"/></div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">142</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">142</h3>
                     <p className="text-sm text-green-600 flex items-center gap-1 mt-2"><TrendingUp className="w-4 h-4"/> +5% from last month</p>
                   </div>
 
@@ -93,7 +93,7 @@ export default function AdminDashboard() {
                       <span className="text-gray-500 font-medium">New Patients</span>
                       <div className="p-2 bg-purple-100 text-purple-700 rounded-lg"><User className="w-5 h-5"/></div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">48</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">48</h3>
                     <p className="text-sm text-gray-500 flex items-center gap-1 mt-2">Steady growth</p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function AdminDashboard() {
            {activeTab === 'bookings' && (
              <div className="space-y-6">
                 <div className="flex justify-between items-center mb-6 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Manage Bookings</h2>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Manage Bookings</h2>
                   <span className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">3 Pending</span>
                 </div>
 
@@ -133,11 +133,11 @@ export default function AdminDashboard() {
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="border-b border-gray-200">
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Patient</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Service</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Date/Time</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Status</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600 text-right">Actions</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Patient</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Service</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Date/Time</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Status</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600 text-right">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
@@ -148,10 +148,10 @@ export default function AdminDashboard() {
                         { name: 'Emily Davis', service: 'Skin Biopsy', date: 'Oct 25, 04:00 PM', status: 'Cancelled' },
                       ].map((apt, i) => (
                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                          <td className="py-4 px-4 font-medium text-gray-900">{apt.name}</td>
-                          <td className="py-4 px-4 text-sm text-gray-600">{apt.service}</td>
-                          <td className="py-4 px-4 text-sm text-gray-600">{apt.date}</td>
-                          <td className="py-4 px-4 text-sm">
+                          <td className="py-4 px-6 md:px-12 lg:px-16 font-medium text-gray-900">{apt.name}</td>
+                          <td className="py-4 px-6 md:px-12 lg:px-16 text-sm text-gray-600">{apt.service}</td>
+                          <td className="py-4 px-6 md:px-12 lg:px-16 text-sm text-gray-600">{apt.date}</td>
+                          <td className="py-4 px-6 md:px-12 lg:px-16 text-sm">
                             <span className={`px-2.5 py-1 rounded-full text-xs font-semibold
                               ${apt.status === 'Pending' ? 'bg-orange-100 text-orange-700' : 
                                 apt.status === 'Approved' ? 'bg-green-100 text-green-700' : 
@@ -160,7 +160,7 @@ export default function AdminDashboard() {
                               {apt.status}
                             </span>
                           </td>
-                          <td className="py-4 px-4 text-right">
+                          <td className="py-4 px-6 md:px-12 lg:px-16 text-right">
                             {apt.status === 'Pending' ? (
                               <div className="flex justify-end gap-2">
                                 <button className="p-1.5 text-green-600 bg-green-50 rounded-lg hover:bg-green-100 transition" title="Approve">
@@ -186,7 +186,7 @@ export default function AdminDashboard() {
            {activeTab === 'patients' && (
              <div className="space-y-6">
                 <div className="flex justify-between items-center mb-6 border-b pb-4">
-                  <h2 className="text-2xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Patient Directory</h2>
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#c5a47e] pl-4">Patient Directory</h2>
                   <div className="relative">
                     <input type="text" placeholder="Search patients..." className="pl-4 pr-10 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50" />
                   </div>
@@ -196,10 +196,10 @@ export default function AdminDashboard() {
                   <table className="w-full text-left border-collapse">
                     <thead>
                       <tr className="border-b border-gray-200 bg-gray-50/50">
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600 rounded-tl-xl">Patient Info</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Contact</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600">Last Visit</th>
-                        <th className="py-3 px-4 text-sm font-semibold text-gray-600 rounded-tr-xl">Actions</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600 rounded-tl-xl">Patient Info</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Contact</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600">Last Visit</th>
+                        <th className="py-3 px-6 md:px-12 lg:px-16 text-sm font-semibold text-gray-600 rounded-tr-xl">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
@@ -211,7 +211,7 @@ export default function AdminDashboard() {
                          { name: 'Michael Brown', email: 'michael@example.com', phone: '+1 555-3321', lastVisit: '6 months ago' },
                        ].map((p, i) => (
                          <tr key={i} className="hover:bg-gray-50 transition-colors">
-                           <td className="py-4 px-4">
+                           <td className="py-4 px-6 md:px-12 lg:px-16">
                              <div className="flex items-center gap-3">
                                <div className="h-10 w-10 rounded-full bg-[#c5a47e]/10 text-[#c5a47e] flex items-center justify-center font-bold">
                                  {p.name.charAt(0)}
@@ -222,12 +222,12 @@ export default function AdminDashboard() {
                                </div>
                              </div>
                            </td>
-                           <td className="py-4 px-4">
+                           <td className="py-4 px-6 md:px-12 lg:px-16">
                              <div className="text-sm text-gray-900">{p.email}</div>
                              <div className="text-xs text-gray-500 mt-1">{p.phone}</div>
                            </td>
-                           <td className="py-4 px-4 text-sm text-gray-600">{p.lastVisit}</td>
-                           <td className="py-4 px-4">
+                           <td className="py-4 px-6 md:px-12 lg:px-16 text-sm text-gray-600">{p.lastVisit}</td>
+                           <td className="py-4 px-6 md:px-12 lg:px-16">
                              <button className="text-sm font-medium text-[#c5a47e] hover:text-[#b08d66]">View Profile</button>
                            </td>
                          </tr>

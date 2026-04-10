@@ -58,7 +58,7 @@ export default function PrivacyPage() {
 
             <div className="space-y-8">
               <section>
-                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl font-bold text-[#0a0a0a]">
+                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c5a47e] text-sm font-bold text-white">
                     1
                   </span>
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl font-bold text-[#0a0a0a]">
+                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c5a47e] text-sm font-bold text-white">
                     2
                   </span>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl font-bold text-[#0a0a0a]">
+                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c5a47e] text-sm font-bold text-white">
                     3
                   </span>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl font-bold text-[#0a0a0a]">
+                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c5a47e] text-sm font-bold text-white">
                     4
                   </span>
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl font-bold text-[#0a0a0a]">
+                <h2 className="mb-4 flex items-center gap-3 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c5a47e] text-sm font-bold text-white">
                     5
                   </span>

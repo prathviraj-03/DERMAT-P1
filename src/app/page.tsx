@@ -85,7 +85,7 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 container px-4 md:px-6">
+        <div className="relative z-10 container px-6 md:px-12 lg:px-16">
           <div className="flex flex-col items-center space-y-6 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -102,7 +102,7 @@ export default function Home() {
               >
                 Ready to Transform?
               </motion.span>
-              <h2 className="font-serif text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold tracking-tighter text-white sm:text-2xl md:text-3xl md:text-4xl lg:text-5xl">
                 Book Your Appointment
                 <span className="text-[#c5a47e]"> Today</span>
               </h2>

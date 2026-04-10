@@ -113,7 +113,7 @@ export function BookingModal() {
               <Calendar className="h-5 w-5 text-black" />
             </div>
             <div>
-              <h2 className="font-serif text-2xl font-bold text-[#1a1a1a]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1a1a1a]">
                 Book Appointment
               </h2>
               <p className="text-sm text-[#666666]">
@@ -136,7 +136,7 @@ export function BookingModal() {
               >
                 <CheckCircle className="h-10 w-10 text-white" />
               </motion.div>
-              <h3 className="font-serif text-2xl font-bold text-[#0a0a0a]">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
                 Booking Confirmed!
               </h3>
               <p className="text-[#666666]">
@@ -200,7 +200,7 @@ export function BookingModal() {
                 </Label>
                 <select
                   id="service"
-                  className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-4 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
+                  className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-6 md:px-12 lg:px-16 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
                   {...register('service')}
                 >
                   <option value="">Select a service</option>
@@ -224,7 +224,7 @@ export function BookingModal() {
                   </Label>
                   <select
                     id="doctor"
-                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-4 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
+                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-6 md:px-12 lg:px-16 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
                     {...register('doctor')}
                   >
                     <option value="">Select Doctor</option>
@@ -247,7 +247,7 @@ export function BookingModal() {
                   </Label>
                   <select
                     id="time"
-                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-4 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
+                    className="flex h-12 w-full rounded-xl border border-[#e5e5e5] bg-white px-6 md:px-12 lg:px-16 py-2 text-sm focus:border-[#0a0a0a] focus:ring-2 focus:ring-[#0a0a0a] focus:outline-none"
                     {...register('time')}
                   >
                     <option value="">Select Time</option>

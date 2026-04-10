@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 const galleries = [
   {
     title: 'Acne Treatment',
-    before: 'https://images.unsplash.com/photo-1558231846-9b6d85ebfa09?q=80&w=600&auto=format&fit=crop',
-    after: 'https://images.unsplash.com/photo-1549492423-400259a2e574?q=80&w=600&auto=format&fit=crop',
+    before: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop',
+    after: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=600&auto=format&fit=crop',
   },
   {
     title: 'Hair Growth Therapy',
-    before: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?q=80&w=600&auto=format&fit=crop',
-    after: 'https://images.unsplash.com/photo-1582239408018-971cbb6b69df?q=80&w=600&auto=format&fit=crop',
+    before: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop',
+    after: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop',
   },
   {
     title: 'Skin Rejuvenation',
-    before: 'https://images.unsplash.com/photo-1507537362848-9c7b70b5b5f1?q=80&w=600&auto=format&fit=crop',
-    after: 'https://images.unsplash.com/photo-1620052564887-200787eeb88c?q=80&w=600&auto=format&fit=crop',
+    before: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop',
+    after: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop',
   },
 ];
 
 export function ResultsGallery() {
   return (
-    <section className="bg-white py-24">
-      <div className="container mx-auto px-4">
+    <section className="bg-white py-24 page-section">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="mb-16 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export function ResultsGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl font-bold text-[#1a1a1a] md:text-5xl"
+            className="font-serif text-2xl md:text-3xl font-bold text-[#1a1a1a] md:text-5xl"
           >
             Before & After Gallery
           </motion.h2>

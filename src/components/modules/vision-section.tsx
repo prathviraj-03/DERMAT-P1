@@ -21,11 +21,11 @@ export function VisionSection() {
       <div className="container">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Images Layout - Left Side */}
-          <div className="relative h-[500px] md:h-[600px]">
+          <div className="relative h-[110vw] md:h-[600px] collage-container-fix">
             {/* Left Image - Coming from left with rotation */}
             <motion.div
               style={{ x: leftImageX, opacity }}
-              className="absolute top-1/4 left-0 z-10 h-64 w-48 md:h-72 md:w-56"
+              className="absolute top-1/4 left-[-5%] z-10 w-[45%] md:h-72 md:w-56"
             >
               <motion.div
                 initial={{ rotate: -10 }}
@@ -45,7 +45,7 @@ export function VisionSection() {
             {/* Center Image - Coming from top with rotation */}
             <motion.div
               style={{ y: centerImageY, opacity }}
-              className="absolute top-0 left-1/2 z-20 h-72 w-56 -translate-x-1/2 md:h-96 md:w-72"
+              className="absolute top-0 left-1/2 z-20 w-[50%] -translate-x-1/2 md:h-96 md:w-72"
             >
               <motion.div
                 initial={{ rotate: 5 }}
@@ -69,7 +69,7 @@ export function VisionSection() {
             {/* Right Image - Coming from right with rotation */}
             <motion.div
               style={{ x: rightImageX, opacity }}
-              className="absolute right-0 bottom-1/4 z-10 h-64 w-48 md:h-72 md:w-56"
+              className="absolute right-[-5%] bottom-1/4 z-10 w-[45%] md:h-72 md:w-56"
             >
               <motion.div
                 initial={{ rotate: 10 }}
@@ -130,7 +130,7 @@ export function VisionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-serif text-4xl font-bold text-[#1a1a1a] md:text-5xl lg:text-6xl"
+              className="font-serif text-4xl font-bold text-[#1a1a1a] md:text-5xl lg:text-6xl text-overflow-fix"
             >
               {homeContent.vision.heading}
             </motion.h2>
@@ -166,7 +166,7 @@ export function VisionSection() {
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                   className="rounded-lg bg-[#f5f5f5] p-4 text-center"
                 >
-                  <div className="text-2xl font-bold text-[#0a0a0a] md:text-3xl">
+                  <div className="text-2xl md:text-3xl font-bold text-[#0a0a0a] md:text-2xl md:text-3xl">
                     {stat.number}
                   </div>
                   <div className="mt-1 text-sm text-[#666666]">

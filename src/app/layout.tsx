@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { MobileNav } from '@/components/layout/mobile-nav';
 import { Providers } from '@/components/providers';
-import { FloatingBookButton } from '@/components/floating-book-button';
 import { ChatbotWidget } from '@/components/modules/chatbot-widget';
 import { siteConfig } from '@/content';
 import './globals.css';
@@ -31,6 +31,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,9 +51,9 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 overflow-x-hidden min-h-[calc(100vh-var(--nav-height))]">{children}</main>
           <Footer />
-          <FloatingBookButton />
+          <MobileNav />
           <ChatbotWidget />
         </Providers>
       </body>

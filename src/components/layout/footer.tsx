@@ -15,21 +15,21 @@ export function Footer() {
     <footer className="bg-[#1a1a1a] text-white">
       {/* Newsletter Section */}
       <div className="border-b border-white/10">
-        <div className="container py-12">
-          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div>
-              <h3 className="mb-2 font-serif text-2xl font-bold">
+        <div className="container py-6 md:py-8">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <div className="text-center md:text-left">
+              <h3 className="mb-1 font-serif text-xl font-bold md:text-2xl">
                 Join Our Newsletter
               </h3>
-              <p className="text-white/60">
+              <p className="text-sm text-white/60">
                 Receive beauty tips, exclusive offers, and clinic updates.
               </p>
             </div>
-            <div className="flex w-full gap-2 md:w-auto">
+            <div className="fluid-newsletter-row mt-2 w-full md:mt-0 md:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full border-white/20 bg-white/10 text-white placeholder:text-white/40 md:w-80"
+                className="border-white/20 bg-white/10 text-white placeholder:text-white/40 md:w-80"
               />
               <Button className="bg-[#c5a47e] font-semibold text-[#1a1a1a] hover:bg-[#d4b896]">
                 Subscribe
@@ -40,27 +40,27 @@ export function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="container py-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
+      <div className="container py-8 md:py-12">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 lg:gap-12">
           {/* Brand */}
-          <div className="col-span-2 space-y-6 md:col-span-2 lg:col-span-1">
+          <div className="col-span-2 space-y-4 md:col-span-4 lg:col-span-1 text-center md:text-left">
             <Link href="/" className="inline-block">
-              <span className="font-serif text-3xl font-bold">
+              <span className="font-serif text-2xl font-bold md:text-3xl">
                 <span className="text-white">{siteConfig.name.split(' ')[0]}</span>
                 <span className="text-[#c5a47e]"> {siteConfig.name.split(' ').slice(1).join(' ')}</span>
               </span>
             </Link>
-            <p className="leading-relaxed text-white/70">
+            <p className="mx-auto text-sm leading-relaxed text-white/70 md:mx-0 max-w-sm">
               {siteConfig.description}
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="mb-6 text-lg font-semibold text-[#c5a47e]">
+          <div className="col-span-1">
+            <h4 className="mb-4 text-base font-semibold text-[#c5a47e] md:text-lg">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -76,11 +76,11 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="mb-6 text-lg font-semibold text-[#c5a47e]">
+          <div className="col-span-1">
+            <h4 className="mb-4 text-base font-semibold text-[#c5a47e] md:text-lg">
               Our Services
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link

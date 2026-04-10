@@ -62,7 +62,7 @@ function BookForm() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="container mx-auto px-4"
+          className="container mx-auto px-6 md:px-12 lg:px-16"
         >
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#c5a47e]/20">
             <Calendar className="h-8 w-8 text-[#c5a47e]" />
@@ -77,14 +77,14 @@ function BookForm() {
       </div>
 
       {/* Form Area */}
-      <div className="container mx-auto px-4 -mt-10 pb-24">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 sm:px-6 w-full -mt-10 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mx-auto max-w-3xl rounded-3xl bg-white p-8 shadow-xl md:p-12"
+          className="mx-auto max-w-3xl rounded-2xl md:rounded-3xl bg-white p-5 md:p-12 shadow-xl border border-gray-100"
         >
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 flex flex-col">
             
             {/* Personal Details */}
             <div>
@@ -97,7 +97,8 @@ function BookForm() {
                   <Input
                     {...register('name')}
                     placeholder="John Doe"
-                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-4 text-gray-900 placeholder:text-gray-400"
+                    autoComplete="name"
+                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-6 md:px-12 lg:px-16 text-gray-900 placeholder:text-gray-400"
                   />
                   {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
                 </div>
@@ -105,8 +106,11 @@ function BookForm() {
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input
                     {...register('phone')}
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
                     placeholder="+91 90000 00000"
-                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-4 text-gray-900 placeholder:text-gray-400"
+                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-6 md:px-12 lg:px-16 text-gray-900 placeholder:text-gray-400"
                   />
                   {errors.phone && <p className="text-xs text-red-500">{errors.phone.message}</p>}
                 </div>
@@ -116,7 +120,7 @@ function BookForm() {
                     type="email"
                     {...register('email')}
                     placeholder="john@example.com"
-                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-4 text-gray-900 placeholder:text-gray-400"
+                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-6 md:px-12 lg:px-16 text-gray-900 placeholder:text-gray-400"
                   />
                   {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
                 </div>
@@ -134,7 +138,7 @@ function BookForm() {
                   <Label>Select Service</Label>
                   <select
                     {...register('service')}
-                    className="flex h-12 w-full rounded-xl border border-gray-200 bg-[#fafafa] px-4 text-sm focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:bg-white transition-all text-gray-900"
+                    className="flex h-12 w-full rounded-xl border border-gray-200 bg-[#fafafa] px-6 md:px-12 lg:px-16 text-sm focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 focus:bg-white transition-all text-gray-900"
                   >
                     <option value="">Choose a treatment...</option>
                     {services.map((s) => (
@@ -179,7 +183,7 @@ function BookForm() {
                     type="date"
                     {...register('date')}
                     min={new Date().toISOString().split('T')[0]} // cant book past
-                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-4 text-gray-900"
+                    className="h-12 w-full rounded-xl bg-[#fafafa] border border-gray-200 focus:bg-white focus:border-[#c5a47e] focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50 transition-all px-6 md:px-12 lg:px-16 text-gray-900"
                   />
                   {errors.date && <p className="text-xs text-red-500">{errors.date.message}</p>}
                 </div>
@@ -210,11 +214,12 @@ function BookForm() {
               </div>
             </div>
 
-            <div className="pt-6 border-t">
+            {/* Sticky Native App Bottom CTA */}
+            <div className="fixed bottom-[var(--nav-height)] left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-gray-100 z-40 md:static md:bg-transparent md:border-t-0 md:p-6 md:mt-4">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-full bg-[#1a0f0a] hover:bg-[#2c1810] py-4 text-center font-bold text-white shadow-xl transition-all disabled:opacity-70 flex justify-center items-center gap-2"
+                className="w-full rounded-2xl md:rounded-full bg-[#1a0f0a] hover:bg-[#2c1810] active:scale-[0.98] py-4 text-center font-bold text-white shadow-xl transition-all disabled:opacity-70 flex justify-center items-center gap-2 h-14"
               >
                 {isSubmitting ? (
                   <><Loader2 className="h-5 w-5 animate-spin" /> Processing...</>

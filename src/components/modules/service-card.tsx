@@ -100,7 +100,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
 
         <CardHeader>
-          <div className="flex items-start justify-between gap-2">
+          <div className="flex items-center md:items-start text-center md:text-left justify-between gap-2">
             <CardTitle className="text-xl text-[#7A2828] transition-colors group-hover:text-[#A04848]">
               {service.name}
             </CardTitle>

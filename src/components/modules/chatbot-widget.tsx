@@ -30,19 +30,18 @@ export function ChatbotWidget() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#1a1a1a] text-[#c5a47e] shadow-xl transition-transform hover:scale-110 hover:bg-[#2a2a2a] md:bottom-28 md:right-8"
+        className="fixed bottom-[calc(var(--nav-height)+1rem)] right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#1a1a1a] text-[#c5a47e] shadow-xl transition-transform hover:scale-105 hover:bg-[#2a2a2a] md:bottom-8 md:right-8 md:h-14 md:w-14"
         aria-label="Open chat"
       >
-        <MessageSquare className="h-6 w-6" />
+        <MessageSquare className="h-5 w-5 md:h-6 md:w-6" />
       </button>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-[11rem] right-4 z-50 flex h-[450px] w-[320px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl md:bottom-[12rem] md:right-8"
+            className="fixed bottom-[calc(var(--nav-height)+4.5rem)] right-4 z-50 flex h-[450px] w-[calc(100vw-2rem)] max-w-[320px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl md:bottom-24 md:right-8"
           >
             {/* Chat header */}
             <div className="flex items-center justify-between bg-[#1a1a1a] p-4 text-white">
@@ -86,7 +85,7 @@ export function ChatbotWidget() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type a message..."
-                  className="flex-1 rounded-xl bg-gray-100 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50"
+                  className="flex-1 rounded-xl bg-gray-100 px-6 md:px-12 lg:px-16 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#c5a47e]/50"
                 />
                 <button
                   type="submit"

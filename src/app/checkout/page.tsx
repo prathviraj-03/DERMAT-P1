@@ -77,7 +77,7 @@ function CheckoutContent() {
           >
             <CheckCircle className="h-12 w-12 text-green-500" />
           </motion.div>
-          <h2 className="mt-6 font-serif text-3xl font-bold tracking-tight text-[#1a1a1a]">
+          <h2 className="mt-6 font-serif text-2xl md:text-3xl font-bold tracking-tight text-[#1a1a1a]">
             Payment Successful
           </h2>
           <p className="mt-2 text-[#666666]">
@@ -90,7 +90,7 @@ function CheckoutContent() {
 
   return (
     <div className="min-h-screen bg-[#fafafa] pt-28 pb-12">
-      <div className="container mx-auto max-w-4xl px-4">
+      <div className="container mx-auto max-w-4xl px-6 md:px-12 lg:px-16">
         
         <div className="mb-8">
           <h1 className="font-serif text-4xl font-bold tracking-tight text-[#1a1a1a] text-center">Checkout</h1>
@@ -147,7 +147,7 @@ function CheckoutContent() {
               </div>
               <div className="flex justify-between items-center border-t border-[#e5e5e5] pt-4">
                 <span className="font-bold text-[#1a1a1a]">Total Payable</span>
-                <span className="text-2xl font-bold text-[#b4905b]">₹{Math.floor(mockPrice * 1.18)}</span>
+                <span className="text-2xl md:text-3xl font-bold text-[#b4905b]">₹{Math.floor(mockPrice * 1.18)}</span>
               </div>
             </div>
           </div>

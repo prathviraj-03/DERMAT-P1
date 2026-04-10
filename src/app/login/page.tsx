@@ -92,12 +92,12 @@ export default function LoginPage() {
           
           <div className="relative z-10 text-center mb-8">
             <Link href="/" className="inline-flex justify-center mb-6">
-              <span className="font-serif text-2xl font-bold tracking-tight">
+              <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight">
                 <span className="text-[#1a1a1a]">DermaCare</span>
                 <span className="text-[#c5a47e]"> Clinic</span>
               </span>
             </Link>
-            <h1 className="text-3xl font-serif font-bold text-[#1a1a1a] mb-2">{isRegistering ? 'Create Account' : 'Welcome Back'}</h1>
+            <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#1a1a1a] mb-2">{isRegistering ? 'Create Account' : 'Welcome Back'}</h1>
             <p className="text-[#666666]">{isRegistering ? 'Sign up for medical updates.' : 'Access your medical records and appointments.'}</p>
           </div>
 
@@ -144,6 +144,9 @@ export default function LoginPage() {
                 <Input
                   id="phone"
                   required
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
                   placeholder="Enter your phone number"
                   className="pl-10 h-12 rounded-xl border-[#e8e8e8] bg-[#fafafa] focus:bg-white text-[#1a1a1a] placeholder:text-[#a3a3a3]"
                   value={phone}
@@ -207,7 +210,7 @@ export default function LoginPage() {
           </form>
 
           {/* DEMO ACCOUNTS HELPER */}
-          <div className="mt-8 pt-6 border-t border-[#e8e8e8] relative z-10 bg-[#fafafa] -mx-4 px-4 py-4 rounded-xl text-center">
+          <div className="mt-8 pt-6 border-t border-[#e8e8e8] relative z-10 bg-[#fafafa] -mx-4 px-6 md:px-12 lg:px-16 py-4 rounded-xl text-center">
             <p className="text-xs font-bold text-[#c5a47e] uppercase tracking-wider mb-3">Demo Credentials</p>
             <div className="flex gap-4 justify-between">
               <div className="text-xs text-left bg-white p-3 rounded-lg border border-[#e8e8e8] flex-1">

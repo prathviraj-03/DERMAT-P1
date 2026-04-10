@@ -55,7 +55,7 @@ export function TestimonialsCarousel() {
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[#c5a47e]/5 blur-3xl" />
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#c5a47e]/5 blur-3xl" />
 
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-6 md:px-12 lg:px-16">
         <div className="mb-16 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export function TestimonialsCarousel() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-3xl font-bold text-white md:text-5xl"
+            className="font-serif text-2xl md:text-3xl font-bold text-white md:text-5xl"
           >
             What Our Patients Say
           </motion.h2>
@@ -104,14 +104,14 @@ export function TestimonialsCarousel() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="relative z-10 flex flex-col items-center text-center px-4"
+                className="relative z-10 flex flex-col items-center text-center px-6 md:px-12 lg:px-16"
               >
                 <div className="mb-6 flex gap-1">
                   {[...Array(reviews[currentIndex].rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-[#c5a47e] text-[#c5a47e]" />
                   ))}
                 </div>
-                <p className="mb-8 font-serif text-xl italic leading-relaxed text-white/90 md:text-3xl">
+                <p className="mb-8 font-serif text-xl italic leading-relaxed text-white/90 md:text-2xl md:text-3xl">
                   "{reviews[currentIndex].text}"
                 </p>
                 <div className="flex flex-col items-center gap-2">

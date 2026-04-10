@@ -44,7 +44,7 @@ export default function BlogsPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-4 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
             >
               Insights & Tips
             </motion.span>
@@ -86,17 +86,17 @@ export default function BlogsPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent lg:bg-gradient-to-t" />
                       <div className="absolute top-6 left-6">
-                        <span className="rounded-full bg-[#c5a47e] px-4 py-2 text-sm font-medium text-white">
+                        <span className="rounded-full bg-[#c5a47e] px-6 md:px-12 lg:px-16 py-2 text-sm font-medium text-white">
                           Featured
                         </span>
                       </div>
                     </div>
 
                     <div className="flex flex-col justify-center p-8 lg:p-12">
-                      <span className="mb-4 inline-block w-fit rounded-full bg-[#0a0a0a]/10 px-4 py-1 text-sm font-medium text-[#0a0a0a]">
+                      <span className="mb-4 inline-block w-fit rounded-full bg-[#0a0a0a]/10 px-6 md:px-12 lg:px-16 py-1 text-sm font-medium text-[#0a0a0a]">
                         {featuredPost.category}
                       </span>
-                      <h2 className="mb-4 font-serif text-2xl font-bold text-[#1a1a1a] transition-colors group-hover:text-[#0a0a0a] md:text-3xl lg:text-4xl">
+                      <h2 className="mb-4 font-serif text-2xl md:text-3xl font-bold text-[#1a1a1a] transition-colors group-hover:text-[#0a0a0a] md:text-2xl md:text-3xl lg:text-4xl">
                         {featuredPost.title}
                       </h2>
                       <p className="mb-6 line-clamp-3 leading-relaxed text-[#666666]">
@@ -130,7 +130,7 @@ export default function BlogsPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-10 flex items-center justify-between">
-              <h2 className="font-serif text-3xl font-bold text-[#1a1a1a] md:text-4xl">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1a1a1a] md:text-4xl">
                 Latest Articles
               </h2>
               <span className="text-[#666666]">
@@ -210,7 +210,7 @@ export default function BlogsPage() {
                 transition={{ duration: 8, repeat: Infinity }}
               />
               <div className="relative z-10 mx-auto max-w-2xl">
-                <h2 className="mb-4 font-serif text-3xl font-bold text-white md:text-4xl">
+                <h2 className="mb-4 font-serif text-2xl md:text-3xl font-bold text-white md:text-4xl">
                   Stay Updated
                 </h2>
                 <p className="mb-8 text-white/80">

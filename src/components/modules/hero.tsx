@@ -63,9 +63,9 @@ export function Hero() {
       {/* Content */}
       <motion.div
         style={{ opacity, y }}
-        className="relative z-20 container px-4 md:px-6"
+        className="relative z-20 container px-6 md:px-12 lg:px-16"
       >
-        <div className="flex max-w-3xl flex-col items-start space-y-8">
+        <div className="flex max-w-3xl flex-col items-center md:items-start text-center md:text-left space-y-8">
           {/* Pre-title */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -149,21 +149,22 @@ export function Hero() {
           >
             <BookButton
               size="lg"
-              className="group bg-[#c5a47e] px-10 py-7 text-lg font-semibold text-[#1a1a1a] shadow-2xl hover:bg-[#d4b896]"
+              className="group bg-[#c5a47e] px-10 py-7 text-lg font-semibold text-[#1a1a1a] shadow-2xl hover:bg-[#d4b896] fluid-btn-global"
             >
               <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:rotate-12" />
               Book an Appointment
             </BookButton>
 
-            <Link href="/services">
+            <Link href="/services" className="w-full sm:w-auto">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto"
               >
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white/30 bg-transparent px-8 py-6 text-lg text-white backdrop-blur-sm hover:border-white/50 hover:bg-white/10"
+                  className="border-2 border-white/30 bg-transparent px-8 py-6 text-lg text-white backdrop-blur-sm hover:border-white/50 hover:bg-white/10 fluid-btn-global w-full sm:w-auto"
                 >
                   Explore Services
                 </Button>
@@ -176,7 +177,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3 }}
-            className="flex gap-8 pt-8 md:gap-12"
+            className="flex gap-8 pt-8 md:gap-12 stats-row-fix"
           >
             {[
               { number: '10+', label: 'Years' },
@@ -190,7 +191,7 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 1.5 + index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-[#c5a47e] md:text-4xl">
+                <div className="text-2xl md:text-3xl font-bold text-[#c5a47e] md:text-4xl">
                   {stat.number}
                 </div>
                 <div className="mt-1 text-sm tracking-wider text-white/60 uppercase">

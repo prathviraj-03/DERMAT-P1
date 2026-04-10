@@ -36,11 +36,11 @@ export function LatestBlogs() {
       <div className="relative z-10 container">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Stacked Blog Images - Vision Style */}
-          <div className="relative order-2 h-[500px] md:h-[600px] lg:order-1">
+          <div className="relative order-2 h-[500px] md:h-[600px] lg:order-1 collage-container-fix">
             {/* Top Left Card */}
             <motion.div
               style={{ x: leftCardX, opacity }}
-              className="absolute top-8 left-0 z-10 w-48 md:w-56"
+              className="absolute top-8 left-0 z-10 w-[40%] md:w-56"
             >
               <Link href={`/blogs/${latest[0]?.slug}`}>
                 <motion.div
@@ -71,7 +71,7 @@ export function LatestBlogs() {
             {/* Center Top Card */}
             <motion.div
               style={{ y: centerCardY, opacity }}
-              className="absolute top-0 left-1/2 z-20 w-56 -translate-x-1/2 md:w-64"
+              className="absolute top-0 left-1/2 z-20 w-[45%] -translate-x-1/2 md:w-64"
             >
               <Link href={`/blogs/${latest[1]?.slug}`}>
                 <motion.div
@@ -106,7 +106,7 @@ export function LatestBlogs() {
             {/* Right Card */}
             <motion.div
               style={{ x: rightCardX, opacity }}
-              className="absolute top-1/4 right-0 z-10 w-48 md:w-56"
+              className="absolute top-1/4 right-0 z-10 w-[40%] md:w-56"
             >
               <Link href={`/blogs/${latest[2]?.slug}`}>
                 <motion.div
@@ -141,7 +141,7 @@ export function LatestBlogs() {
             {/* Bottom Center Card */}
             <motion.div
               style={{ y: bottomCardY, opacity }}
-              className="absolute bottom-0 left-1/3 z-15 w-52 -translate-x-1/2 md:w-60"
+              className="absolute bottom-0 left-1/3 z-15 w-[42%] -translate-x-1/2 md:w-60"
             >
               <Link href={`/blogs/${latest[3]?.slug}`}>
                 <motion.div
@@ -240,7 +240,7 @@ export function LatestBlogs() {
               {latest.slice(0, 3).map((post, index) => (
                 <Link key={post.id} href={`/blogs/${post.slug}`}>
                   <div className="group flex cursor-pointer items-center gap-4 rounded-lg p-3 transition-colors hover:bg-[#f5f5f5]">
-                    <span className="text-3xl font-bold text-[#c5a47e]/30 transition-colors group-hover:text-[#c5a47e]">
+                    <span className="text-2xl md:text-3xl font-bold text-[#c5a47e]/30 transition-colors group-hover:text-[#c5a47e]">
                       0{index + 1}
                     </span>
                     <div>

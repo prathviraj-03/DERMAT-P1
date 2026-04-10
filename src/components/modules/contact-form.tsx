@@ -62,7 +62,7 @@ export function ContactForm() {
         >
           <CheckCircle className="h-8 w-8 text-white" />
         </motion.div>
-        <h3 className="font-serif text-2xl font-bold text-[#0a0a0a]">
+        <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a]">
           Message Sent!
         </h3>
         <p className="text-[#666666]">

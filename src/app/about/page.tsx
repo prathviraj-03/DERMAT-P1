@@ -74,7 +74,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-4 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium tracking-wide text-[#d4a574]"
             >
               About DermaCare Clinic
             </motion.span>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-16 text-center">
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#0a0a0a]/5 px-4 py-2 text-sm font-medium tracking-wide text-[#0a0a0a]">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#0a0a0a]/5 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium tracking-wide text-[#0a0a0a]">
                 What We Stand For
               </span>
               <h2 className="font-serif text-4xl font-bold text-[#0a0a0a] md:text-5xl">
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#c5a47e]">
                   <Heart className="h-7 w-7 text-white" />
                 </div>
-                <h2 className="mb-4 font-serif text-3xl font-bold text-white md:text-4xl">
+                <h2 className="mb-4 font-serif text-2xl md:text-3xl font-bold text-white md:text-4xl">
                   Our Mission
                 </h2>
                 <p className="text-lg leading-relaxed text-white/70">
@@ -171,7 +171,7 @@ export default function AboutPage() {
                     ].map((item) => (
                       <span
                         key={item}
-                        className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-white/80"
+                        className="inline-flex items-center gap-2 rounded-full bg-white/5 px-6 md:px-12 lg:px-16 py-2 text-sm text-white/80"
                       >
                         <CheckCircle className="h-4 w-4 text-[#c5a47e]" />
                         {item}
@@ -194,7 +194,7 @@ export default function AboutPage() {
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0a0a0a]">
                   <Shield className="h-7 w-7 text-white" />
                 </div>
-                <h2 className="mb-4 font-serif text-3xl font-bold text-[#0a0a0a] md:text-4xl">
+                <h2 className="mb-4 font-serif text-2xl md:text-3xl font-bold text-[#0a0a0a] md:text-4xl">
                   Hygiene Standards
                 </h2>
                 <p className="text-lg leading-relaxed text-[#666666]">
@@ -213,7 +213,7 @@ export default function AboutPage() {
                     ].map((item) => (
                       <span
                         key={item}
-                        className="inline-flex items-center gap-2 rounded-full bg-[#0a0a0a]/5 px-4 py-2 text-sm text-[#0a0a0a]"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#0a0a0a]/5 px-6 md:px-12 lg:px-16 py-2 text-sm text-[#0a0a0a]"
                       >
                         <CheckCircle className="h-4 w-4 text-[#c5a47e]" />
                         {item}
@@ -233,7 +233,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-16 text-center">
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#c5a47e]/10 px-4 py-2 text-sm font-medium tracking-wide text-[#c5a47e]">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#c5a47e]/10 px-6 md:px-12 lg:px-16 py-2 text-sm font-medium tracking-wide text-[#c5a47e]">
                 <Users className="h-4 w-4" />
                 The Experts
               </span>
